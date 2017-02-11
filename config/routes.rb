@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
-  resources :lounges
+  resources :lounges do
+    resources :bevs do
+      resources :orders
+    end
+  end
 
 end
