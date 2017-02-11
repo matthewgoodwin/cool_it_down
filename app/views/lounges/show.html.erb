@@ -1,1 +1,10 @@
-<p>Lounge#show</p>
+<h1>Lounge#show</h1>
+<h3><%= @lounge.name %></h3>
+
+<% @lounge.bevs.each do |booz|%>
+<div class="flex">
+  <p><%= booz.name %></p>
+  <p><%= booz.desc %></p>
+  <p><%= booz.cost %></p>
+  </div>
+<% end  %>
