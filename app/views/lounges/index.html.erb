@@ -1,8 +1,8 @@
 <h1>lounge#index.html.erb</h1>
 <% @lounges.each do |l| %>
-  <div class= "flex">
+  <div>
     <%= link_to lounge_path(l) do %>
-      <div class="flex">
+      <div class= "flex">
         <p>lounge: <%= l.name %></p>
         <p>manager: <%= l.user.fname %></p>
       </div>
