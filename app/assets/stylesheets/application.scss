@@ -18,10 +18,15 @@ body{
   background-color: rgb(249,249,249);
   color: rgb(15,15,15);
 }
-.flex{
-  display: flex;
-  // justify-content:space-around;
+
+li{
+  list-style: none;
 }
+
 .margin{
   margin-top: 60px;
+}
+
+a:hover{
+ text-decoration: none;
 }

@@ -1,0 +1,35 @@
+.container{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0.5px 0.5px 4px #a8a8a8;
+}
+
+.lounge{
+  margin: 20px;
+}
+
+.lounge-index-flex{
+  display: flex;
+  // justify-content:space-between;
+  // align-items: center;
+  position: relative;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 2px 2px 9px #a8a8a8;
+}
+
+.lounge-index-body{
+  flex: 1 auto;
+  padding: 20px;
+  // text-align: center;
+}
+
+.lounge-index-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}

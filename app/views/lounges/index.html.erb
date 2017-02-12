@@ -1,11 +1,19 @@
-<h1>lounge#index.html.erb</h1>
-<% @lounges.each do |l| %>
-  <div>
-    <%= link_to lounge_path(l) do %>
-      <div class= "flex">
-        <p>lounge: <%= l.name %></p>
-        <p>manager: <%= l.user.fname %></p>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+<div class="container">
+  <h1>lounge#index.html.erb</h1>
+  <div class="lounges">
+    <% @lounges.each do |l| %>
+      <div class="lounge-index-flex">
+        <div class="lounge-index-body">
+          <%= link_to lounge_path(l), class: "no-decor" do %>
+            <h4><%= l.name + " " + "(" + l.city + ")" %></h4>
+            <p><%= l.cat %></p>
+            <p><%= l.desc %></p>
+          <% end %><!-- end of link path-->
+        </div><!--end of lounge body-->
+        <div class="lounge-index-action">
+          <p>action</p>
+        </div><!--end of lounge action-->
+      </div><!--end of flexbox-->
+    <% end %><!--end of @lounges-->
+  </div><!--end of lounges div-->
+</div><!--end of container-->
