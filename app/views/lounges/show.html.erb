@@ -1,10 +1,19 @@
-<h1>Lounge#show</h1>
-<h3><%= @lounge.name %></h3>
-
-<% @lounge.bevs.each do |b|%>
-<div class="flex bev-div">
-  <p><%= b.name %>
-  <%= b.desc %>
-  <%= b.cost %></p>
-  </div>
-<% end  %>
+<div class="container">
+  <div class="lounge-container">
+    <h1><%= @lounge.name %></h1>
+    <h4>Lounge#show</h4>
+    <% @lounge.bevs.each do |b|%>
+    <div class="bev-div">
+      <div class="bev-head">
+        <p><%= b.name %></p>
+      </div><!--end of bev head-->
+      <div class="bev-body">
+        <p><%= b.variety %></p>
+      </div>
+      <div class="bev-cost">
+        <p><%= b.cost %></p>
+      </div>
+    </div>
+    <% end  %>
+    </div><!--end of the nx-->
+</div><!--container-->
