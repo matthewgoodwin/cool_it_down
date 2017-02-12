@@ -21,7 +21,7 @@ user5 = User.create(username:"mk", fname: "mathew", lname:"cline", email:"mk@gma
 
 lounge1 = Lounge.create(name:"kitcat", cat:"bar", desc:"cat lounge and bar", city:"seoul", user: user1)
 lounge2 = Lounge.create(name:"cutter and buck", cat:"tavern", desc:"upscale bar with classic music and drinks", city:"san francisco", user: user4)
-lounge3 = Lounge.create(name:"petes", cat:"divebar", desc:"open at 6am til 6am", city:"Denver", user: user5)
+lounge3 = Lounge.create(name:"petes", cat:"divebar", desc:"open at 6am til 6am", city:"denver", user: user5)
 lounge4 = Lounge.create(name:"sjbg", cat:"bar and grill", desc:"san joses premier sports bar and grill", city:"san jose", user: user2)
 
 bev1 = Bev.create(name:"max", desc:"korean brew", cost: 3.00, lounge:lounge3)

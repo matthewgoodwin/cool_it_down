@@ -11,9 +11,10 @@
   </head>
 
   <body>
+    <%= render "shared/navbar" %>
     <div class="margin">
-    <%= yield %>
-    <!--to handle errors-->
-    </div>
+      <%= yield %>
+      <!--to handle errors-->
+    </div><!--end of margin-->
   </body>
 </html>
