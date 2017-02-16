@@ -1,19 +1,19 @@
-
 <div class="container">
   <div class="lounge-container">
     <h1><%= @lounge.name %></h1>
     <h4>Lounge#show</h4>
-    <% @lounge.bevs.each do |b|%>
-      <%= link_to bev_path(b) do%>
+    <% @lounge.bevs.each do |bev|%>
+      <%= link_to bev_path(bev) do%>
       <div class="bev-div">
         <div class="bev-head">
-          <p><%= b.name %></p>
+          <p><%= bev.name %></p>
         </div><!--end of bev head-->
+        <%= render "orders/order_form", bev: bev, order: @order %>
         <div class="bev-body">
-          <p><%= b.variety %></p>
+          <p><%= bev.variety %></p>
         </div class="flex">
         <div class="bev-cost">
-          <p><%= b.cost %></p>
+          <p><%= bev.cost %></p>
         </div>
       </div>
       <% end %><!--end of path-->
