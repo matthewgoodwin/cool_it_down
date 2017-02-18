@@ -1,4 +1,10 @@
 # README
+feb 18, 2017
+below goes in the `lounges#show` page
+<div>
+    <%= render "orders/order_form", bev: bev, order: @order %>
+</div>
+
 
 Feb, 14, 2017
 NEW

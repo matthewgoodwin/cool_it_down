@@ -1,22 +1,43 @@
 <div class="container">
+
   <div class="lounge-container">
+
     <h1><%= @lounge.name %></h1>
     <h4>Lounge#show</h4>
+
     <% @lounge.bevs.each do |bev|%>
-      <%= link_to bev_path(bev) do%>
+
+
       <div class="bev-div">
-        <div class="bev-head">
-          <p><%= bev.name %></p>
-        </div><!--end of bev head-->
-        <%= render "orders/order_form", bev: bev, order: @order %>
-        <div class="bev-body">
-          <p><%= bev.variety %></p>
-        </div class="flex">
-        <div class="bev-cost">
-          <p><%= bev.cost %></p>
-        </div>
-      </div>
-      <% end %><!--end of path-->
-    <% end %>
-    </div><!--end of the nx-->
+        <%= link_to bev_path(bev), class: "bev-path-link" do %>
+          <div class="bev-head">
+            <h4><%= bev.name %></h4>
+          </div><!--end of bev head-->
+
+          <div class="bev-body">
+            <p>description: <%= bev.desc %></p>
+            <p>category: <%= bev.variety %></p>
+          </div><!--end of bev body-->
+
+          <div class="bev-cost">
+            <p><%= bev.cost %></p>
+          </div><!-- end of cost-->
+        <% end %><!-- end of path-->
+          <div class="bev-action">
+            <p>action</p>
+          </div>
+
+      </div> <!-- end of bev-div -->
+
+
+      <!-- The README FILE-->
+
+
+    <% end %><!-- end of loun bev loop -->
+
+  </div><!-- end of the loung-con -->
+
 </div><!--container-->
+
+
+

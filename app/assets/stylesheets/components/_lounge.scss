@@ -33,10 +33,32 @@
 }
 
 // show page
-
 .bev-div{
-  display: flex;
-  justify-content:space-between;
+  // display: flex;
+  // // ^^ needed to keep the entire div inline
+  // justify-content: space-between;
+  // align-items: center;
+  border-bottom: 1px solid #606060;
+  border-top: 1px solid #606060;
+
+  padding: 5px;
 }
 
-
+.bev-path-link{
+  display: flex;
+  // ^^ needed to keep the head, body, cost inline
+  justify-content: space-between;
+  align-items: center;
+}
+.bev-head{
+  flex: 0 0 20%;
+}
+.bev-body{
+  flex: 1 0 auto;
+}
+.bev-cost{
+  flex: 0 0 10%;
+}
+.bev-action{
+  text-align: center;
+}
