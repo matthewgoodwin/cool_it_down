@@ -62,6 +62,8 @@
 .bev-cost{
   // flex: 0 0 20%;
 }
-// .bev-action{
-//   text-align: center;*
-// }
+.bev-action{
+  // display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}

@@ -12,18 +12,39 @@
         <%= link_to bev_path(bev), class: "bev-path-link" do %>
 
           <div class="bev-body">
-            <h3><%= bev.name %></h3>
+            <h4><%= bev.name %></h4>
             <!--description here -->
-            <p>category: <%= bev.variety %></p>
+            <p>style: <%= bev.variety %></p>
           </div><!--end of bev body-->
         <% end %><!-- end of path-->
 
-          <div class="bev-cost">
-            <p><%= bev.cost %></p>
-          </div><!-- end of cost-->
+         <!--  <div class="bev-cost">
+            <p>cost</p>
+          </div> <!-- end of cost-->
+
+
+
           <div class="bev-action">
-            <%= link_to "order", bev_path(bev), class: "btn btn-primary" %>
+            <div>
+              <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
+                <div class="btn btn-primary">$<%= bev.cost %></div>
+              </a>
+            </div>
           </div>
+
+          <!--begin modal of review partial-->
+            <div class="modal fade bev-mod-style" id="bev-form-<%= bev.id %>">
+              <div class="modal-dialog" role="document"><!--aligns the modal document-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
+                  </div><!--end of header-->
+                  <div class="modal-body">
+                    <%= render "orders/order_form", bev: bev, order: @order %>
+                  </div><!--end of modal-body-->
+                </div><!--end of modal-content-->
+              </div><!--end of modal-dialog-->
+            </div><!--end of modal-->
 
       </div> <!-- end of bev-div -->
 
@@ -36,6 +57,5 @@
   </div><!-- end of the loung-con -->
 
 </div><!--container-->
-
 
 

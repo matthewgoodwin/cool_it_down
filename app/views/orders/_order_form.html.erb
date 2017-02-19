@@ -1,7 +1,7 @@
 <div>
   <%= simple_form_for([bev, @order]) do |f| %>
-    <%= f.input :quantity %>
-    <%= f.input :zone %>
-    <%= f.input :duration, collection: ["10 mins","15 mins","20 mins","30 mins"], prompt:"select input" %>
+    <%= f.input :quantity, label: false, placeholder:"quantity" %>
+    <%= f.input :zone, label: false, placeholder:"select zone" %>
+    <%= f.input :duration, collection: [10,15,20,30], prompt:"intervals in minutes", label: false %>
   <% end %>
 </div>
