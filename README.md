@@ -1,4 +1,53 @@
 # README
+
+feb 19, 2017
+
+<div class="container">
+
+  <div class="lounge-container">
+
+    <h1><%= @lounge.name %></h1>
+    <h4>Lounge#show</h4>
+
+    <% @lounge.bevs.each do |bev|%>
+
+
+      <div class="bev-div">
+        <%= link_to bev_path(bev), class: "bev-path-link" do %>
+          <div class="bev-head">
+            <h3><%= bev.name %></h3>
+          </div><!--end of bev head-->
+
+          <div class="bev-body">
+            <p>description: <%= bev.desc %></p>
+            <p>category: <%= bev.variety %></p>
+          </div><!--end of bev body-->
+
+          <div class="bev-cost">
+            <p><%= bev.cost %></p>
+          </div><!-- end of cost-->
+        <% end %><!-- end of path-->
+          <div class="bev-action">
+            <%= link_to "order", bev_path(bev), class: "btn btn-primary" %>
+          </div>
+
+      </div> <!-- end of bev-div -->
+
+
+      <!-- The README FILE-->
+
+
+    <% end %><!-- end of loun bev loop -->
+
+  </div><!-- end of the loung-con -->
+
+</div><!--container-->
+
+
+
+
+
+
 feb 18, 2017
 below goes in the `lounges#show` page
 <div>

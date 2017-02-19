@@ -10,21 +10,19 @@
 
       <div class="bev-div">
         <%= link_to bev_path(bev), class: "bev-path-link" do %>
-          <div class="bev-head">
-            <h4><%= bev.name %></h4>
-          </div><!--end of bev head-->
 
           <div class="bev-body">
-            <p>description: <%= bev.desc %></p>
+            <h3><%= bev.name %></h3>
+            <!--description here -->
             <p>category: <%= bev.variety %></p>
           </div><!--end of bev body-->
+        <% end %><!-- end of path-->
 
           <div class="bev-cost">
             <p><%= bev.cost %></p>
           </div><!-- end of cost-->
-        <% end %><!-- end of path-->
           <div class="bev-action">
-            <p>action</p>
+            <%= link_to "order", bev_path(bev), class: "btn btn-primary" %>
           </div>
 
       </div> <!-- end of bev-div -->
