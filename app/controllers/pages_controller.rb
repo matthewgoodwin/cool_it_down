@@ -14,6 +14,11 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def dashboard
+    @lounge = Lounge.new
+  end
+
   private
 
 end

@@ -9,6 +9,7 @@ class LoungesController < ApplicationController
   end
 
   def new
+    @lounge = Lounge.new
   end
 
   def create

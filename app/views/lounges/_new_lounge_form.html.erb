@@ -1,0 +1,10 @@
+<%= simple_form_for @lounge do |f| %>
+  <%= f.input :name, label: false, placeholder: "name" %>
+  <%= f.input :address, label: false, placeholder: "address" %>
+  <%= f.input :city, label: false, placeholder: "city" %>
+  <%= f.input :cat, label: false, collection:["lounge", "bar", "bar&grill","ultra lounge", "dive", "other"], prompt: "category" %>
+  <%= f.input :desc, label: false, placeholder: "description" %>
+  <%= f.input :phone, label: false, placeholder: "phone" %>
+  <%= f.input :branch, label: false, placeholder: "branch id" %>
+<% end %>
+<p><%= link_to "home", root_path %></p>

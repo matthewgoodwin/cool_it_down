@@ -1,0 +1,10 @@
+<h1>dashboard#pages</h1>
+<div class="container">
+ <p><%= link_to 'home', root_path %></p>
+  <h3>welcome <%= current_user.fname %>&nbsp<%= current_user.lname %></h3>
+
+  <p><%= current_user.username %></p>
+  <p><%= current_user.email %></p>
+
+  <p><%= link_to 'create lounge', new_lounge_path %></p>
+</div>
