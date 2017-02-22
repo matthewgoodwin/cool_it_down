@@ -5,6 +5,9 @@
   <%= f.input :cat, label: false, collection:["lounge", "bar", "bar&grill","ultra lounge", "dive", "other"], prompt: "category" %>
   <%= f.input :desc, label: false, placeholder: "description" %>
   <%= f.input :phone, label: false, placeholder: "phone" %>
+  <%= f.input :manager, label: false, placeholder: "manager" %>
   <%= f.input :branch, label: false, placeholder: "branch id" %>
+  <%= f.submit %>
 <% end %>
 <p><%= link_to "home", root_path %></p>
+<p><%= link_to "back", dashboard_path %></p>

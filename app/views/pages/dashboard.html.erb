@@ -6,5 +6,13 @@
   <p><%= current_user.username %></p>
   <p><%= current_user.email %></p>
 
+   <% current_user.lounges.each do |l| %>
+    <p>
+    <%= l.name %>
+    <%= l.city %>
+    <%= l.branch %>
+    </p>
+   <% end %>
+
   <p><%= link_to 'create lounge', new_lounge_path %></p>
 </div>
