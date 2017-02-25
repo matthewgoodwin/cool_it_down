@@ -48,10 +48,6 @@ feb 19, 2017
 </div><!--container-->
 
 
-
-
-
-
 feb 18, 2017
 below goes in the `lounges#show` page
 <div>

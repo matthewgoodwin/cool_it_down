@@ -4,7 +4,6 @@ class BevsController < ApplicationController
   before_action :set_lounge, only: [:create]
 
   def index
-
   end
 
   def show
@@ -40,6 +39,7 @@ class BevsController < ApplicationController
   def bev_params
     params.require(:bev).permit(:name, :desc, :cat, :region, :nation, :style, :cost)
   end
+
   def set_lounge
     @lounge = Lounge.find(params[:lounge_id])
   end
