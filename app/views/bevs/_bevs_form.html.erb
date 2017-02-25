@@ -1,4 +1,4 @@
-<%= simple_form_for([lounge, @bev]) do |f| %>
+<%= simple_form_for([lounge, bev]) do |f| %>
   <%= f.input :name, label: false, placeholder:"name" %>
   <%= f.input :desc, label: false, placeholder:"description" %>
   <%= f.input :cat, label: false, placeholder:"category" %>
@@ -6,6 +6,6 @@
   <%= f.input :nation, label: false, placeholder:"country" %>
   <%= f.input :style, label: false, placeholder:"style" %>
   <%= f.input :cost, label: false, placeholder:"cost" %>
-  <%= f.hidden_field :lounge, value: @lounge %>
+
   <%= f.submit %>
 <% end %>
