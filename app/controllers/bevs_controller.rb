@@ -1,7 +1,7 @@
 class BevsController < ApplicationController
   before_action :find_bev, only: [:show, :new, :edit, :update, :destroy]
   before_action :bev_params, only: [:create]
-  before_action :set_lounge
+  before_action :set_lounge, only: [:create]
 
   def index
 
@@ -20,7 +20,6 @@ class BevsController < ApplicationController
     @bev.lounge = @lounge
     @bev.save
     redirect_to lounge_path(@lounge)
-
   end
 
   def edit

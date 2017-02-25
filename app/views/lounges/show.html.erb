@@ -1,5 +1,12 @@
 <div class="container">
 
+  <div class="bev-action">
+    <div>
+      <a href="" data-toggle="modal" data-target="#create-bev" >
+        <div class="btn btn-primary">create beverage</div>
+      </a>
+    </div>
+  </div>
   <div class="lounge-container">
 
     <h1><%= @lounge.name %></h1>
@@ -53,8 +60,31 @@
 
     <% end %><!-- end of loun bev loop -->
 
+
+
+
+
+
+          <!--begin modal of review partial-->
+            <div class="modal fade bev-mod-style" id="create-bev">
+              <div class="modal-dialog" role="document"><!--aligns the modal document-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="create-bev-modal-header">create new beverage</h3>
+                  </div><!--end of header-->
+                  <div class="modal-body">
+                    <%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
+                  </div><!--end of modal-body-->
+                </div><!--end of modal-content-->
+              </div><!--end of modal-dialog-->
+            </div><!--end of modal-->
+
+
+
+
+
   </div><!-- end of the loung-con -->
-<%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
+
 </div><!--container-->
 
 
