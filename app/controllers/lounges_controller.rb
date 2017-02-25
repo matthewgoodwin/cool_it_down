@@ -12,6 +12,7 @@ class LoungesController < ApplicationController
 
   def new
     @lounge = Lounge.new
+    @bev = Bev.new
   end
 
   def create

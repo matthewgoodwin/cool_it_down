@@ -1,4 +1,8 @@
 # README
+Feb 24, 2017
+undefined method `country_select' for #<SimpleForm::FormBuilder:0x007ff969110728>
+dumb problem/bug with country.. so changed to 'nation'.. noby has time for this....
+
 
 feb 19, 2017
 

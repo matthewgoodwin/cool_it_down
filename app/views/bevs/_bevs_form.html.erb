@@ -1,7 +1,12 @@
 <%= simple_form_for([lounge, @bev]) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :desc %>
-  <%= f.input :cat %>
-  <%= f.input :style %>
-  <%= f.input :cost %>
+
+  <%= f.input :name, label: false, placeholder:"name" %>
+  <%= f.input :desc, label: false, placeholder:"description" %>
+  <%= f.input :cat, label: false, placeholder:"category" %>
+  <%= f.input :region, label: false, placeholder:"region" %>
+  <%= f.input :nation, label: false, placeholder:"country" %>
+  <%= f.input :style, label: false, placeholder:"style" %>
+  <%= f.input :cost, label: false, placeholder:"cost" %>
+  <%= f.hidden_field :lounge, value: @lounge %>
+  <%= f.submit %>
 <% end %>
