@@ -1,8 +1,11 @@
 class LoungesController < ApplicationController
-  before_action :find_lounge, only: [:show, :edit, :update, :destroy]
+  before_action :find_lounge, only: [:show, :receipts ,:edit, :update, :destroy]
   before_action :lounge_params, only: [:create]
   def index
     @lounges = Lounge.all
+  end
+
+  def receipts
   end
 
   def show

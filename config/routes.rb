@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'dashboard', to: 'pages#'
   resources :lounges, shallow: true do
+    member do
+    get "receipts", to: "lounges#receipts"
+  end
   # :bevs/:orders #show, #edit, #update, #destroy already have the bev_id from the bevs controller ...
   # I only need to nest :bevs/:orders #index, #new, #create..
   # shollow nests for #index #new and #create

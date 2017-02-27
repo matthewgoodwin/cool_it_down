@@ -1,0 +1,8 @@
+
+<p>hahah</p>
+<% @lounge.orders.each do |receipt|%>
+  <%= receipt.user.fname %>
+  <%= receipt.quantity %>
+  <%= receipt.zone %>
+  <%= receipt.bev.name %>
+<% end %>

@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :user
   belongs_to :lounge
-  has_many :bevs
-  # ^ do I need the above?
+  belongs_to :bev
+
   validates :duration, :quantity, :zone, presence: true
 end
