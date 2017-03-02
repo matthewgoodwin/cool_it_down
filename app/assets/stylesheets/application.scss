@@ -38,6 +38,9 @@ a:hover{
 .space-b{
   justify-content: space-between;
 }
+.space-a{
+  justify-content: space-around;
+}
 
 .btn-primary{
   background: #592222;
@@ -47,4 +50,12 @@ a:hover{
 .btn-primary:hover{
   background: #682626;
   border-color: #682626;
+}
+
+.border{
+  border: 1px solid grey;
+}
+
+.flex-d{
+  flex: wrap;
 }
