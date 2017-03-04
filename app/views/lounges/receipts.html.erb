@@ -1,11 +1,18 @@
-
-<p>hahah</p>
+<h1>receipts</h1>
+<div class="shell">
+<div class="flex flex-direction flex-wrap">
+  <div class="flex-item">customer</div>
+  <div class="flex-item">#</div>
+  <div class="flex-item">zone</div>
+  <div class="flex-item">drink</div>
+</div>
 
 <% @lounge.orders.each do |receipt|%>
-  <div>
-  <p> <%= receipt.user.fname %>
-  <%= receipt.quantity %>
-  <%= receipt.zone %>
-  <%= receipt.bev.name %></p>
+  <div class="flex flex-direction flex-wrap">
+    <div class="flex-item"><%= receipt.user.fname %></div>
+    <div class="flex-item"><%= receipt.quantity %></div>
+    <div class="flex-item"><%= receipt.zone %></div>
+    <div class="flex-item"><%= receipt.bev.name %></div>
   </div>
 <% end %>
+</div>

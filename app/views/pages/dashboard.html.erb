@@ -1,33 +1,32 @@
 <h1>dashboard#pages</h1>
 <div class="container">
  <p><%= link_to 'home', root_path %></p>
+ <p><%= link_to 'create lounge', new_lounge_path %></p>
   <h3>welcome <%= current_user.fname %>&nbsp<%= current_user.lname %></h3>
-
   <p><%= current_user.username %></p>
   <p><%= current_user.email %></p>
-  <div class="border">
-  <ul class="flex space-b">
-    <li>name</li>
-    <li>category</li>
-    <li>address</li>
-    <li>city</li>
-    <li>branch</li>
-    <li>manager</li>
-    <li>phone</li>
-    <li>orders</li>
-  </ul>
+  <div class="border dash-lounge-shell">
+    <div class="flex flex-wrap flex-direction space-b">
+      <div class="flex-item"><b>name</b></div>
+      <div class="flex-item"><b>category</b></div>
+      <div class="flex-item"><b>address</b></div>
+      <div class="flex-item"><b>city</b></div>
+      <div class="flex-item"><b>branch</b></div>
+      <div class="flex-item"><b>manager</b></div>
+      <div class="flex-item"><b>phone</b></div>
+      <div class="flex-item"><b>action</b></div>
+    </div>
    <% current_user.lounges.each do |l| %>
-    <ul class="flex space-b">
-    <li><%= l.name %></li>
-    <li><%= l.cat %></li>
-    <li><%= l.address %></li>
-    <li><%= l.city %></li>
-    <li><%= l.branch %></li>
-    <li><%= l.manager %></li>
-    <li><%= l.phone %></li>
-    <li><%= link_to "see orders", receipts_lounge_path(l) %></li>
-    </ul>
+    <div class="flex flex-wrap flex-direction space-b dash-lounge-list">
+      <div class="flex-item"><%= l.name %></div>
+      <div class="flex-item"><%= l.cat %></div>
+      <div class="flex-item"><%= l.address %></div>
+      <div class="flex-item"><%= l.city %></div>
+      <div class="flex-item"><%= l.branch %></div>
+      <div class="flex-item"><%= l.manager %></div>
+      <div class="flex-item"><%= l.phone %></div>
+      <div class="flex-item"><%= link_to "view orders", receipts_lounge_path(l) %></div>
+    </div>
    <% end %>
   </div>
-  <p><%= link_to 'create lounge', new_lounge_path %></p>
 </div>
