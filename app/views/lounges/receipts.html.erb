@@ -7,18 +7,22 @@
   <div class="flex-item b">name</div>
   <div class="flex-item b">count</div>
   <div class="flex-item b">zone</div>
-  <div class="flex-item b">drink</div>
+  <div class="flex-item b">order</div>
+  <div class="flex-item b">time</div>
 </div>
 
 <% @lounge.orders.each do |receipt| %>
+
+  <% @time = receipt.created_at %>
   <div class="flex flex-direction flex-wrap receipt-div align-i-cent text-a-cent space-b">
   <div class="flex-item">
-    <div class="user-avatar logo-img" style="background-image: url('<%= image_path "logo-user.png" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
+    <div class="user-avatar logo-img" style="background-image: url('<%= image_path "user-icon.png" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
     </div>
     <div class="flex-item"><%= receipt.user.fname %></div>
     <div class="flex-item"><%= receipt.quantity %></div>
     <div class="flex-item"><%= receipt.zone %></div>
     <div class="flex-item"><%= receipt.bev.name %></div>
+    <div class="flex-item"><%= @time.strftime("%H:%M:%S") %></div>
   </div>
 <% end %>
 

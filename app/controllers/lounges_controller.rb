@@ -41,6 +41,6 @@ class LoungesController < ApplicationController
   end
 
   def lounge_params
-    params.require(:lounge).permit(:name, :address, :city, :cat, :desc, :phone, :branch)
+    params.require(:lounge).permit(:name, :address, :city, :cat, :desc, :phone, :manager, :branch)
   end
 end

@@ -1,10 +1,19 @@
 <h1>dashboard#pages</h1>
 <div class="container">
+<h3>welcome, <%= current_user.fname %>&nbsp<%= current_user.lname %></h3>
+<div class="flex user-card-shell">
+  <div class="user-card space-b align-i-cent text-a-cent">
+    <div class="flex-item">
+      <div class="user-avatar logo-img" style="background-image: url('<%= image_path "user-icon.png" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
+    </div><!--end of user-icon-->
+    <div class="flex-item"><%= current_user.username %></div>
+    <div class="flex-item"><%= current_user.email %></div>
+  </div><!--end of user card-->
+</div><!--end of user-card-shell-->
+
  <p><%= link_to 'home', root_path %></p>
  <p><%= link_to 'create lounge', new_lounge_path %></p>
-  <h3>welcome <%= current_user.fname %>&nbsp<%= current_user.lname %></h3>
-  <p><%= current_user.username %></p>
-  <p><%= current_user.email %></p>
+
   <div class="border dash-lounge-shell">
     <div class="flex flex-wrap flex-direction space-b">
       <div class="flex-item"><b>name</b></div>
@@ -17,7 +26,7 @@
       <div class="flex-item"><b>action</b></div>
     </div>
    <% current_user.lounges.each do |l| %>
-    <div class="flex flex-wrap flex-direction space-b dash-lounge-list">
+    <div class="flex flex-wrap flex-direction space-b dash-lounge-list align-i-cent">
       <div class="flex-item"><%= l.name %></div>
       <div class="flex-item"><%= l.cat %></div>
       <div class="flex-item"><%= l.address %></div>
@@ -28,5 +37,5 @@
       <div class="flex-item"><%= link_to "view orders", receipts_lounge_path(l) %></div>
     </div>
    <% end %>
-  </div>
-</div>
+  </div><!--end of border shell-->
+</div><!--end of container-->
