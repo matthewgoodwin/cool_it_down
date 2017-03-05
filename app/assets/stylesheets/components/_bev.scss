@@ -1,0 +1,34 @@
+.bev-div{
+  display: flex;
+  // // ^^ needed to keep the entire div inline
+  justify-content: space-between;
+  align-items: center;
+  // border-bottom: 1px solid #606060;
+  border-top: 1px solid #606060;
+  // margin: 10px;*
+  // padding: 5px;*
+}
+.bev-head > h2{
+  margin-top: 0;
+}
+.bev-path-link{
+  // display: flex;
+  // // ^^ needed to keep the head, body, cost inline
+  // justify-content: space-between;
+  // align-items: center;
+}
+
+.bev-body{
+  // flex: 1 0 auto;
+  // ^ this allows the box to expand the length of the phrase without paragragh breaks. one long continuous phrase(not good)
+  padding: 10px;
+}
+
+.bev-cost{
+  // flex: 0 0 20%;
+}
+.bev-action{
+  // display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}
