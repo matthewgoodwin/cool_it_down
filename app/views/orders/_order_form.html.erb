@@ -1,8 +1,10 @@
 <div>
-  <%= simple_form_for([bev, order]) do |f| %>
-    <%= f.input :quantity, collection:[1,2,3,4,5,6], label: false, prompt: "quantity" %>
-    <%= f.input :zone, label: false, placeholder: "select zone" %>
-    <%= f.input :duration, collection:[10,15,20,30], prompt: "intervals in minutes", label: false %>
+  <%= simple_form_for([bev, order], remote: true) do |f| %>
+    <%= f.input :quantity, collection:[1,2,3,4,5,6], label: false, prompt: "quantity", input_html: { class: "clear-order"} %>
+    <%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order"}%>
+    <%= f.input :duration, collection:[10,15,20,30], prompt: "intervals in minutes", label: false, input_html: { class: "clear-order"} %>
     <%= f.submit %>
   <% end %>
 </div>
+
+<!-- im not totally sure why i need 'input_html' to use a class in this form-->

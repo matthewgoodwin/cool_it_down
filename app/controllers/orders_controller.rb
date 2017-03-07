@@ -21,9 +21,18 @@ class OrdersController < ApplicationController
     @order.bev_id = @bev.id
 
     if @order.save
-      redirect_to lounge_path(@bev.lounge)
+      respond_to do |format|
+        format.html { redirect_to lounge_path(@bev.lounge) }
+        # ^ will render regular html format and redirect
+        format.js
+        # ^ will render 'app/views/orders/create.js.erb' .. 'create' comes from this controller method name.
+        # ^^ 'orders/create.js.erb' has access to the @order created/saved in this controller method.
+    end
     else
-
+      respond_to do |format|
+        format.html { render 'lounges/show'}
+        format.js #<-- idem
+      end
     end
 
 
