@@ -1,8 +1,8 @@
 <div>
   <%= simple_form_for([bev, order], remote: true) do |f| %>
-    <%= f.input :quantity, collection:[1,2,3,4,5,6], label: false, prompt: "quantity", input_html: { class: "clear-order"} %>
-    <%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order"}%>
-    <%= f.input :duration, collection:[10,15,20,30], prompt: "intervals in minutes", label: false, input_html: { class: "clear-order"} %>
+    <%= f.input :quantity, collection:[1,2,3,4,5,6], label: false, prompt: "quantity", input_html: { class: "clear-order" } %>
+    <%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order" }%>
+    <%= f.input :duration, collection:[10,15,20,30], prompt: "intervals in minutes", label: false, input_html: { class: "clear-order" } %>
     <%= f.submit %>
   <% end %>
 </div>
