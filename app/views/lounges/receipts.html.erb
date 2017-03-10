@@ -11,17 +11,15 @@
   <div class="flex-item b">time</div>
 </div>
 
-<% @lounge.orders.each do |order| %>
-
-  <% @time = order.created_at %>
-  <div class="flex flex-direction flex-wrap receipt-div align-i-cent text-a-cent space-b" id="lounge-order-receipts">
-
-  <%= render 'orders/order_receipt', order: order %>
-  <!-- ^ data is rendered from the partial -->
-  <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
-
-<% end %>
-
-</div>
-<!--there should be a javascript create page with this content-->
+<div id="order">
+  <% @lounge.orders.each do |order| %>
+    <% @time = order.created_at %>
+    <div class="flex flex-direction flex-wrap receipt-div align-i-cent text-a-cent space-b" id="lounge-order-receipts">
+      <%= render 'orders/order_receipt', order: order %>
+      <!-- ^ data is rendered from the partial -->
+      <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
+      <% end %>
+    </div>
+  <!--there should be a javascript create page with this content-->
+  </div><!--end of id='order'-->
 </div>
