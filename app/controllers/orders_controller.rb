@@ -34,8 +34,6 @@ class OrdersController < ApplicationController
         format.js #<-- idem
       end
     end
-
-
   end
 
   def edit

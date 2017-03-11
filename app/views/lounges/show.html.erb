@@ -45,6 +45,33 @@
       <!-- The README FILE-->
     <% end %><!-- end of loun bev loop -->
 
+
+<!--receipts will ne placed here.. ajax can only update the current page.. too much data here-->
+<div class="receipt-shell">
+  <div class="flex flex-direction flex-wrap text-a-cent space-b">
+    <div class="flex-item b">user</div>
+    <div class="flex-item b">name</div>
+    <div class="flex-item b">count</div>
+    <div class="flex-item b">zone</div>
+    <div class="flex-item b">order</div>
+    <div class="flex-item b">time</div>
+  </div>
+
+  <div id="order">
+    <% if @lounge.orders.blank? %>
+    <% else %>
+      <% @lounge.orders.each do |order| %>
+        <div id="lounge-order-receipt">
+          <%= render 'orders/order_receipt', order: order %>
+          <!-- ^ data is rendered from the partial -->
+          <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
+      <% end %> <!--end of loop-->
+      </div> <!--end of flexbox div-->
+    <% end %><!--end of if statement-->
+    <!--there should be a javascript create page with this content-->
+    </div><!--end of id='order'-->
+</div><!--end of the receipt-shell
+
           <!--begin modal of bev create partial-->
             <div class="modal fade bev-mod-style" id="create-bev">
               <div class="modal-dialog" role="document"><!--aligns the modal document-->
