@@ -58,6 +58,7 @@ class OrdersController < ApplicationController
   end
 
   def set_lounge
-
+    # should I set the lounge for the index
+    # @lounge = Lounge.find(params[:lounge_id])
   end
 end

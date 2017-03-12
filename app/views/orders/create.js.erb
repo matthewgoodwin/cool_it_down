@@ -3,5 +3,6 @@
 $('.clear-order').val('');
 $('.modal').modal('hide');
 var app_order = $("<%= j render 'orders/order_receipt', order: @order %>");
-$('#lounge-order-receipt').prepend(app_order);
+$('#lounge-order-receipt').append(app_order);
 // the appending is not working, but the html is working.. not sure why..
+
