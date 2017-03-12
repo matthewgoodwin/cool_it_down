@@ -1,12 +1,10 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :set_bev, only: [:create]
-  before_action :set_lounge, only:[:index]
+
   before_action :order_params, only:[:create]
 
-  def index
-    @orders = @lounge.orders
-  end
+
 
   def show
   end
@@ -57,8 +55,5 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:duration, :quantity, :zone)
   end
 
-  def set_lounge
-    # should I set the lounge for the index
-    # @lounge = Lounge.find(params[:lounge_id])
-  end
+
 end
