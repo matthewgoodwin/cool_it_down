@@ -58,7 +58,8 @@
   </div>
 
   <div id="order">
-
+    <% if @lounge.orders.blank? %>
+    <% else %>
       <% @lounge.orders.each do |order| %>
         <div id="lounge-order-receipt">
           <%= render 'orders/order_receipt', order: order %>
@@ -66,7 +67,7 @@
           <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
       <% end %> <!--end of loop-->
       </div> <!--end of flexbox div-->
-
+    <% end %><!--end of if statement-->
     <!--there should be a javascript create page with this content-->
     </div><!--end of id='order'-->
 </div><!--end of the receipt-shell-->

@@ -4,5 +4,5 @@ $('.clear-order').val('');
 $('.modal').modal('hide');
 var app_order = $("<%= j render 'orders/order_receipt', order: @order %>");
 $('#order').prepend(app_order);
-// the appending is not working, but the html is working.. not sure why..
+// ^ append is working on the lounges/show page, i needed to append to the id order
 
