@@ -9,6 +9,12 @@
   <div class="lounge-container">
     <h1><%= @lounge.name %></h1>
     <h4>Lounge#show</h4>
+
+    <div>
+      <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
+    </div><!--end of button div-->
+
+<div class="bev-shell">
     <% @lounge.bevs.each do |bev|%>
       <div class="bev-div">
         <%= link_to bev_path(bev), class: "bev-path-link" do %>
@@ -44,7 +50,7 @@
       </div> <!-- end of bev-div -->
       <!-- The README FILE-->
     <% end %><!-- end of loun bev loop -->
-
+</div><!--end of bev-shell-->
 
 <!--receipts will ne placed here.. ajax can only update the current page.. too much data here-->
 <div class="receipt-shell">
