@@ -26,9 +26,12 @@ li{
 .margin{
   margin-top: 60px;
 }
-
+a{
+  color: #1C1C1C;
+}
 a:hover{
- text-decoration: none;
+  text-decoration: none;
+  color: #1C1C1C;
 }
 
 .flex{
@@ -82,4 +85,8 @@ a:hover{
 }
 .logo-img{
   margin: 0 auto;
+}
+
+.toggle-button-div{
+  border-radius: 50%;
 }
