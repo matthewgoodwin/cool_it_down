@@ -1,5 +1,13 @@
 # README
 
+March 18, 2017
+
+ <div>
+      <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
+</div><!--end of link_to toggle button div -->
+
+
+
 March 11, 2017
 # I want to auto refresh the div without refreshing the entire page.. I can only use
 # on the same page so this should target receipts.html.erb

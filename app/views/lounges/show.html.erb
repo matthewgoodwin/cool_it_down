@@ -10,14 +10,12 @@
     <h1><%= @lounge.name %></h1>
     <h4>Lounge#show</h4>
 
-    <div>
-      <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
-    </div><!--end of button div-->
-    <div>
+    <!-- ReadMe file for the the link_to version of the toggle button March 18-->
+      <div class="toggle-button-div">
       <a href="#">
-        <div class="btn btn-primary toggle-menu-order">menu/order</div>
+        <div class="btn btn-primary toggle-menu-order"><i class="fa fa-exchange" aria-hidden="true"></i></div>
       </a>
-    </div>
+    </div><!--end of the toggle button-->
 <div class="bev-shell">
     <% @lounge.bevs.each do |bev|%>
       <div class="bev-div">
@@ -25,7 +23,7 @@
           <div class="bev-body">
             <h4><%= bev.name %></h4>
             <!--description here -->
-            <p>style: <%= bev.style %></p>
+            <p><%= bev.style %></p>
           </div><!--end of bev body-->
         <% end %><!-- end of path-->
          <!--  <div class="bev-cost">
