@@ -27,7 +27,9 @@ li{
   margin-top: 60px;
 }
 a{
+  text-decoration: none;
   color: #1C1C1C;
+
 }
 a:hover{
   text-decoration: none;
@@ -87,6 +89,13 @@ a:hover{
   margin: 0 auto;
 }
 
-.toggle-button-div{
+.round-div{
   border-radius: 50%;
+}
+
+.light-shadow{
+box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+}
+.no-decor{
+  text-decoration: none;
 }
