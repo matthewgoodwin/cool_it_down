@@ -14,13 +14,19 @@
 @import "pages/index";
 @import "vendor/index";
 
+
 body{
   background-color: rgb(249,249,249);
   color: rgb(15,15,15);
+  text-decoration: none;
 }
 
 li{
   list-style: none;
+}
+
+.shell-con{
+  max-width: 800px;
 }
 
 .margin{
