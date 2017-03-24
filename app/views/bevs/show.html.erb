@@ -1,6 +1,7 @@
 
 <h1>bevs#show.html.erb</h1>
 <%= link_to "back", lounge_path(@bev.lounge.id) %>
+
 <div class="container">
   <h1><%= @bev.lounge.name %></h1>
   <h3><%= @bev.name %></h3>
@@ -8,6 +9,24 @@
   <p><%= @bev.desc %></p>
   <p><%= @bev.region %></p>
   <p><%= @bev.cat %></p>
-  <p><%= @bev.cost %></p>
+  <div class="bev-action">
+  <div>
+    <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
+      <div class="btn btn-primary no-decor">$<%= @bev.cost %></div>
+    </a>
+  </div>
+</div>
 </div><!--end of container-->
-<%= render "orders/order_form", bev: @bev, order: @order %>
+<!--begin modal of review partial-->
+  <div class="modal fade bev-mod-style" id="bev-form-showpage-<%= @bev.id %>">
+    <div class="modal-dialog" role="document"><!--aligns the modal document-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="bev-modal-header">Order for '<%= @bev.name %>'</h3>
+        </div><!--end of header-->
+        <div class="modal-body">
+          <%= render "orders/order_form", bev: @bev, order: @order %>
+        </div><!--end of modal-body-->
+      </div><!--end of modal-content-->
+    </div><!--end of modal-dialog-->
+  </div><!--end of modal-->
