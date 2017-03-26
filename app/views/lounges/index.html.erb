@@ -6,11 +6,11 @@
         <div class="lounge-index-flex flex flex-direction flex-wrap align-i-cent text-a-cent space-b">
           <div class="lounge-index-body">
             <%= link_to lounge_path(l), class: "no-decor" do %>
-              <h3><%= l.name %></h3>
+              <h4><%= l.name %></h4>
             <% end %><!-- end of link path-->
           </div><!--end of lounge body-->
           <div class="">
-            <h4 class="lounge-index-action flex-item2"><%= l.city %></h4>
+            <h6 class="lounge-index-action flex-item2"><%= l.city %></h6>
           </div><!--end of lounge action-->
         </div><!--end of flexbox-->
       <% end %><!--end of @lounges-->
