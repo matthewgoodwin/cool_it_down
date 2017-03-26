@@ -1,19 +1,18 @@
 <div class="container">
-  <div class="lounge-container">
+  <div class="lounge-container shell-con">
     <h1>lounge#index.html.erb</h1>
 
       <% @lounges.each do |l| %>
-        <div class="lounge-index-flex">
+        <div class="lounge-index-flex flex flex-direction flex-wrap align-i-cent text-a-cent space-b">
           <div class="lounge-index-body">
             <%= link_to lounge_path(l), class: "no-decor" do %>
-              <h4><%= l.name + " " + "(" + l.city + ")" %></h4>
+              <h3><%= l.name %></h3>
             <% end %><!-- end of link path-->
           </div><!--end of lounge body-->
-          <div class="lounge-index-action">
-            <p>action</p>
+          <div class="">
+            <h4 class="lounge-index-action flex-item2"><%= l.city %></h4>
           </div><!--end of lounge action-->
         </div><!--end of flexbox-->
       <% end %><!--end of @lounges-->
-
   </div><!--end of lounge-contianer-->
 </div><!--end of container-->

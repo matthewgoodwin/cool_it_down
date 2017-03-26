@@ -1,36 +1,43 @@
 <div class="container">
-  <div class="bev-action">
-    <div>
-      <a href="" data-toggle="modal" data-target="#create-bev">
-        <div class="btn round-div no-decor"><i class="fa fa-plus fa-lg"></i></div>
-      </a>
-    </div>
-  <!--begin modal of bev create partial-->
-    <div class="modal fade bev-mod-style" id="create-bev">
-      <div class="modal-dialog" role="document"><!--aligns the modal document-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="create-bev-modal-header">create new beverage</h3>
-          </div><!--end of header-->
-          <div class="modal-body">
-            <%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
-          </div><!--end of modal-body-->
-        </div><!--end of modal-content-->
-      </div><!--end of modal-dialog-->
-    </div><!--end of modal-->
-
-
-  </div>
-  <div class="lounge-container shell-con">
+ <div class="lounge-container shell-con">
     <h1><%= @lounge.name %></h1>
     <h4>Lounge#show</h4>
+  <div class="lounge-show-nav flex flex-direction flex-wrap text-a-cent space-b">
+    <div class="back-btn flex">
+      <%= link_to lounges_path do %>
+        <i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i>
+      <% end %>
+    </div><!--end back-btn-->
 
-    <!-- ReadMe file for the the link_to version of the toggle button March 18-->
-      <div class="">
-      <a href="#">
-        <div class="btn toggle-menu-order round-div no-decor"><i class="fa fa-exchange fa-lg" aria-hidden="true"></i></div>
-      </a>
-    </div><!--end of the toggle button-->
+    <div class="bev-action flex">
+      <div>
+        <a href="" data-toggle="modal" data-target="#create-bev">
+          <div class="btn round-div no-decor"><i class="fa fa-plus fa-lg"></i></div>
+        </a>
+      </div>
+    <!--begin modal of bev create partial-->
+      <div class="modal fade bev-mod-style" id="create-bev">
+        <div class="modal-dialog" role="document"><!--aligns the modal document-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="create-bev-modal-header">create new beverage</h3>
+            </div><!--end of header-->
+            <div class="modal-body">
+              <%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
+            </div><!--end of modal-body-->
+          </div><!--end of modal-content-->
+        </div><!--end of modal-dialog-->
+      </div><!--end of modal-->
+    </div><!--end of bev-action div-->
+
+      <!-- ReadMe file for the the link_to version of the toggle button March 18-->
+        <div class="flex"><!--bev/receipt toggle-->
+        <a href="#">
+          <div class="btn toggle-menu-order round-div no-decor"><i class="fa fa-exchange fa-lg" aria-hidden="true"></i></div>
+        </a>
+      </div><!--end of the bev/reciept toggle button-->
+  </div><!--end of lounge-show-nav-->
+
   <div class="bev-shell">
       <% @lounge.bevs.each do |bev|%>
         <div class="bev-div">

@@ -9,26 +9,31 @@
   font-family: 'Lato', sans-serif;
 }
 
+.lounge-show-nav{
+  max-width: 400px;
+  margin: auto;
+}
+
 .lounge-index-flex{
-  display: flex;
+  // display: flex;
   // justify-content:space-between;
   // align-items: center;
-  position: relative;
+  // position: relative;
   border-radius: 5px;
   margin: 10px;
   box-shadow: 2px 2px 9px #a8a8a8;
 }
 
 .lounge-index-body{
-  flex: 1 auto;
+  // flex: 1 auto;
   padding: 20px;
   // text-align: center;
 }
 
 .lounge-index-action{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   padding: 10px;
 }
 
