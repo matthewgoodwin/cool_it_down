@@ -15,9 +15,10 @@
       <div class="dropdown">
         <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-cool-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-cool-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><%= link_to 'log out', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "sign in", new_user_session_path, class: "no-decor" %></li>
+          <li><%= link_to "dashboard", dashboard_path, class: "no-decor" %></li>
+          <li><%= link_to "lounges index", lounges_path, class: "no-decor" %></li>
+          <li><%= link_to "sign out", destroy_user_session_path, class: "no-decor", method: :delete %></li>
         </ul>
       </div>
     </div>
@@ -29,9 +30,10 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-cool-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "sign in", new_user_session_path, class: "no-decor" %></li>
+        <li><%= link_to "dashboard", dashboard_path, class: "no-decor" %></li>
+        <li><%= link_to "lounges index", lounges_path, class: "no-decor" %></li>
+        <li><%= link_to "sign out", destroy_user_session_path, class: "no-decor", method: :delete %></li>
       </ul>
     </div>
   </div>
