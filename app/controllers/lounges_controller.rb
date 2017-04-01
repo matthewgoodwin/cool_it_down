@@ -2,7 +2,7 @@ class LoungesController < ApplicationController
   before_action :find_lounge, only: [:show, :receipts ,:edit, :update, :destroy]
   before_action :lounge_params, only: [:create]
   def index
-    @lounges = Lounge.all
+    @lounges = policy_scope(Lounge.all)
     authorize @lounges
   end
 
