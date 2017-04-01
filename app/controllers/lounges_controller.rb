@@ -3,6 +3,7 @@ class LoungesController < ApplicationController
   before_action :lounge_params, only: [:create]
   def index
     @lounges = Lounge.all
+    authorize @lounges
   end
 
   def receipts
