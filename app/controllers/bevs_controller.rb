@@ -8,15 +8,17 @@ class BevsController < ApplicationController
 
   def show
     @order = Order.new
-
   end
-  def new
 
+  def new
   end
 
   def create
     @bev = Bev.new(bev_params)
     @bev.lounge = @lounge
+    authorize @bev
+    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
+    # ^^ I only want the lounge owner or admin to create bevs
     @bev.save
     redirect_to lounge_path(@lounge)
   end
@@ -34,13 +36,17 @@ class BevsController < ApplicationController
 
   def find_bev
     @bev = Bev.find(params[:id])
-  end
-
-  def bev_params
-    params.require(:bev).permit(:name, :desc, :cat, :region, :nation, :style, :cost)
+    authorize @bev
+    # ^ authorize(@bev)
   end
 
   def set_lounge
     @lounge = Lounge.find(params[:lounge_id])
+    authorize @lounge
+    # ^ authorize(@lounge)
+  end
+
+  def bev_params
+    params.require(:bev).permit(:name, :desc, :cat, :region, :nation, :style, :cost)
   end
 end

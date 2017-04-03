@@ -1,5 +1,16 @@
 # README
 
+April 4, 2017
+rails g pundit:policy class_name
+
+
+authorize @bev
+    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
+    # ^^ I only want the lounge owner or admin to create bevs
+
+
+
+
 March 18, 2017
 
  <div>
