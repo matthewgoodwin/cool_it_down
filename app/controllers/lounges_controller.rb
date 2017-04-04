@@ -22,6 +22,7 @@ class LoungesController < ApplicationController
     @lounge = Lounge.new
     @bev = Bev.new
     authorize @lounge
+    authorize @bev
   end
 
   def create

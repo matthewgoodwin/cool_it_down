@@ -16,7 +16,8 @@ class BevsController < ApplicationController
   def create
     @bev = Bev.new(bev_params)
     @bev.lounge = @lounge
-    authorize @bev
+    # raise
+    authorize @bev.lounge
     # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
     # ^^ I only want the lounge owner or admin to create bevs
     @bev.save
@@ -42,7 +43,7 @@ class BevsController < ApplicationController
 
   def set_lounge
     @lounge = Lounge.find(params[:lounge_id])
-    authorize @lounge
+
     # ^ authorize(@lounge)
   end
 
