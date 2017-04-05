@@ -17,7 +17,7 @@ class BevsController < ApplicationController
     @bev = Bev.new(bev_params)
     @bev.lounge = @lounge
     # raise
-    authorize @bev.lounge
+    authorize @bev, :create?
     # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
     # ^^ I only want the lounge owner or admin to create bevs
     @bev.save

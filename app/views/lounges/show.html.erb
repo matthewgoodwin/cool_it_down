@@ -11,9 +11,11 @@
 
     <div class="bev-action flex">
       <div>
-        <a href="" data-toggle="modal" data-target="#create-bev">
-          <div class="btn round-div no-decor"><i class="fa fa-plus fa-lg"></i></div>
-        </a>
+        <% if policy(@lounge).destroy? %>
+          <a href="" data-toggle="modal" data-target="#create-bev">
+            <div class="btn round-div no-decor"><i class="fa fa-plus fa-lg"></i></div>
+          </a>
+        <% end %>
       </div>
     <!--begin modal of bev create partial-->
       <div class="modal fade bev-mod-style" id="create-bev">

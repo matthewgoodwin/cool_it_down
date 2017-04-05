@@ -16,13 +16,14 @@ class LoungesController < ApplicationController
   def show
     @order = Order.new
     @bev = Bev.new
+    authorize @bev
   end
 
   def new
     @lounge = Lounge.new
-    @bev = Bev.new
+    # @bev = Bev.new
     authorize @lounge
-    authorize @bev
+    # authorize @bev
   end
 
   def create

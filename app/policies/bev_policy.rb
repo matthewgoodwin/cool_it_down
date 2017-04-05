@@ -16,6 +16,6 @@ class BevPolicy < ApplicationPolicy
   private
 
   def lounge_owner?
-    record.user == user
+    record.lounge.user == user
   end
 end
