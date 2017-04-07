@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.lounge = @bev.lounge
     @order.bev_id = @bev.id
-
+    authorize @order
     if @order.save
       respond_to do |format|
         format.html { redirect_to lounge_path(@bev.lounge) }
@@ -46,6 +46,7 @@ class OrdersController < ApplicationController
   private
   def set_order
     @order = Order.find(params[:id])
+    authorize @order
   end
   def set_bev
     @bev = Bev.find(params[:bev_id])
