@@ -35,6 +35,8 @@ class LoungePolicy < ApplicationPolicy
   def owner?
     record.user == user
     # ^ same as: `record.user == user ? true : false`
+    # ^^ @lounge.user == current_user
+    # ^^^ from the `find_lounge` before_action on the lounges#controller
   end
 
 end

@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
-  before_action :set_bev, only: [:create]
+  before_action :find_order, only: [:show, :edit, :update, :destroy]
+  before_action :find_bev, only: [:create]
 
   before_action :order_params, only:[:create]
 
@@ -44,11 +44,13 @@ class OrdersController < ApplicationController
   end
 
   private
-  def set_order
+
+  def find_order
     @order = Order.find(params[:id])
+    # raise
     authorize @order
   end
-  def set_bev
+  def find_bev
     @bev = Bev.find(params[:bev_id])
   end
 

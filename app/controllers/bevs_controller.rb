@@ -1,10 +1,10 @@
 class BevsController < ApplicationController
   before_action :find_bev, only: [:show, :new, :edit, :update, :destroy]
   before_action :bev_params, only: [:create]
-  before_action :set_lounge, only: [:create]
+  before_action :find_lounge, only: [:create]
 
-  def index
-  end
+  # def index
+  # end
 
   def show
     @order = Order.new
@@ -16,9 +16,8 @@ class BevsController < ApplicationController
   def create
     @bev = Bev.new(bev_params)
     @bev.lounge = @lounge
-    # raise
     authorize @bev, :create?
-    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
+    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `find_lounge` below
     # ^^ I only want the lounge owner or admin to create bevs
     @bev.save
     redirect_to lounge_path(@lounge)
@@ -41,10 +40,11 @@ class BevsController < ApplicationController
     # ^ authorize(@bev)
   end
 
-  def set_lounge
-    @lounge = Lounge.find(params[:lounge_id])
-
-    # ^ authorize(@lounge)
+  def find_lounge
+    # @lounge = Lounge.find(params[:lounge_id])
+    # ^ standard way above
+    @lounge = current_user.lounges.find(params[:lounge_id])
+    # ^ the above should add a layer of security. ensuring that only the current user creates the bev.
   end
 
   def bev_params
