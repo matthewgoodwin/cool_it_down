@@ -1,0 +1,23 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: calc(100vh - 60px);
+  // height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+.banner a {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  // margin-bottom: 20px;
+}
+
+.home-link:hover{
+    color: rgba(255, 255, 255, 0.7)
+}

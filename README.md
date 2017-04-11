@@ -1,5 +1,9 @@
 # README
 
+april 11,2017
+deleted from the home page
+  <p><%= link_to "sign out", destroy_user_session_path, class: "no-decor home-link", method: :delete %></p>
+
 April 4, 2017
 rails g pundit:policy class_name
 

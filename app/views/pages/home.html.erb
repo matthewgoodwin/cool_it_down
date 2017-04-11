@@ -1,16 +1,4 @@
-<div class="banner" style='background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("<%= image_path 'cid-logo.jpg' %>");'>
-
-
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<p><%= link_to "sign in", new_user_session_path, class: "no-decor" %></p>
-
-<p><%= link_to "sign out", destroy_user_session_path, class: "no-decor", method: :delete %></p>
-
-<p><%= link_to "lounges index", lounges_path, class: "no-decor" %></p>
-
-
-
+<div class="banner" style='background-image: linear-gradient(180deg, rgba(0,101,168,0.40) 0%, rgba(0,36,61,0.45) 50%), url("<%= image_path 'cid-logo.jpg' %>");'>
+  <p><%= link_to "sign in", new_user_session_path, class: "no-decor home-link" %></p>
+  <p><%= link_to "lounges index", lounges_path, class: "no-decor home-link" %></p>
 </div>
