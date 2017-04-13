@@ -23,6 +23,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h3 class="create-bev-modal-header">create new beverage</h3>
+              <p>bevs#_bevs_form.html</p>
             </div><!--end of header-->
             <div class="modal-body">
               <%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
@@ -60,12 +61,13 @@
                 </a>
               </div>
             </div>
-            <!--begin modal of review partial-->
+            <!--begin modal of order partial-->
               <div class="modal fade bev-mod-style" id="bev-form-<%= bev.id %>">
                 <div class="modal-dialog" role="document"><!--aligns the modal document-->
                   <div class="modal-content">
                     <div class="modal-header">
                       <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
+                      <p>orders#_order_form.html</p>
                     </div><!--end of header-->
                     <div class="modal-body">
                       <%= render "orders/order_form", bev: bev, order: @order %>
