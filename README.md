@@ -4,26 +4,7 @@ april 11,2017
 deleted from the home page
   <p><%= link_to "sign out", destroy_user_session_path, class: "no-decor home-link", method: :delete %></p>
 
-April 4, 2017
-rails g pundit:policy class_name
-
-
-authorize @bev
-    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
-    # ^^ I only want the lounge owner or admin to create bevs
-
-
-
-
-March 18, 2017
-
- <div>
-      <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
-</div><!--end of link_to toggle button div -->
-
-
-
-March 11, 2017
+Part 2:
 # I want to auto refresh the div without refreshing the entire page.. I can only use
 # on the same page so this should target receipts.html.erb
 below is the starting point:
@@ -32,6 +13,20 @@ setInterval(function(){
   $('#orders').load("lounges/show.html.erb");
 }, 2000);
 
+
+April 4, 2017
+rails g pundit:policy class_name
+
+authorize @bev
+    # ^ i think I need to authorize the @lounge here? `authorize(@lounge)` or `set_lounge` below
+    # ^^ I only want the lounge owner or admin to create bevs
+
+
+March 18, 2017
+
+ <div>
+      <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
+</div><!--end of link_to toggle button div -->
 
 
 Feb 24, 2017
