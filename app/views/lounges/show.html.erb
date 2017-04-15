@@ -34,80 +34,81 @@
     </div><!--end of bev-action div-->
 
       <!-- ReadMe file for the the link_to version of the toggle button March 18-->
-        <div class="flex"><!--bev/receipt toggle-->
-        <a href="#">
-          <div class="btn toggle-menu-order round-div no-decor"><i class="fa fa-exchange fa-lg" aria-hidden="true"></i></div>
-        </a>
-      </div><!--end of the bev/reciept toggle button-->
+    <div class="flex"><!--bev/receipt toggle-->
+      <a href="#bev-order-rec-div"><!--scrolls to bev/reciept shell-->
+        <div class="btn toggle-menu-order round-div no-decor"><i class="fa fa-exchange fa-lg" aria-hidden="true"></i></div>
+      </a>
+    </div><!--end of the bev/reciept toggle button-->
   </div><!--end of lounge-show-nav-->
 
-  <div class="bev-shell">
-      <% @lounge.bevs.each do |bev|%>
-        <div class="bev-div">
-          <%= link_to bev_path(bev), class: "bev-path-link no-decor" do %>
-            <div class="bev-body">
-              <h4><%= bev.name %></h4>
-              <!--description here -->
-              <h6><%= bev.style %></h6>
-            </div><!--end of bev body-->
-          <% end %><!-- end of path-->
-           <!--  <div class="bev-cost">
-              <p>cost</p>
-            </div> end of cost-->
-            <div class="bev-action">
-              <div>
-                <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
-                  <div class="btn btn-primary no-decor">$<%= bev.cost %></div>
-                </a>
+  <div id="bev-order-rec-div"><!-- div for bev/reciept shells-->
+    <div class="bev-shell">
+        <% @lounge.bevs.each do |bev|%>
+          <div class="bev-div">
+            <%= link_to bev_path(bev), class: "bev-path-link no-decor" do %>
+              <div class="bev-body">
+                <h4><%= bev.name %></h4>
+                <!--description here -->
+                <h6><%= bev.style %></h6>
+              </div><!--end of bev body-->
+            <% end %><!-- end of path-->
+             <!--  <div class="bev-cost">
+                <p>cost</p>
+              </div> end of cost-->
+              <div class="bev-action">
+                <div>
+                  <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
+                    <div class="btn btn-primary no-decor">$<%= bev.cost %></div>
+                  </a>
+                </div>
               </div>
-            </div>
-            <!--begin modal of order partial-->
-              <div class="modal fade bev-mod-style" id="bev-form-<%= bev.id %>">
-                <div class="modal-dialog" role="document"><!--aligns the modal document-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
-                      <p>orders#_order_form.html</p>
-                    </div><!--end of header-->
-                    <div class="modal-body">
-                      <%= render "orders/order_form", bev: bev, order: @order %>
-                    </div><!--end of modal-body-->
-                  </div><!--end of modal-content-->
-                </div><!--end of modal-dialog-->
-              </div><!--end of modal-->
-        </div> <!-- end of bev-div -->
-        <!-- The README FILE-->
-      <% end %><!-- end of loun bev loop -->
-  </div><!--end of bev-shell-->
+              <!--begin modal of order partial-->
+                <div class="modal fade bev-mod-style" id="bev-form-<%= bev.id %>">
+                  <div class="modal-dialog" role="document"><!--aligns the modal document-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
+                        <p>orders#_order_form.html</p>
+                      </div><!--end of header-->
+                      <div class="modal-body">
+                        <%= render "orders/order_form", bev: bev, order: @order %>
+                      </div><!--end of modal-body-->
+                    </div><!--end of modal-content-->
+                  </div><!--end of modal-dialog-->
+                </div><!--end of modal-->
+          </div> <!-- end of bev-div -->
+          <!-- The README FILE-->
+        <% end %><!-- end of loun bev loop -->
+    </div><!--end of bev-shell-->
 
-<!--receipts will ne placed here.. ajax can only update the current page.. too much data here-->
-<div class="order-shell receipt-shell shell-con">
-  <div class="flex flex-direction flex-wrap text-a-cent space-b">
-    <div class="flex-item b">user</div>
-    <div class="flex-item b">name</div>
-    <div class="flex-item b">count</div>
-    <div class="flex-item b">zone</div>
-    <div class="flex-item b">order</div>
-    <div class="flex-item b">time</div>
-  </div>
+  <!--receipts will ne placed here.. ajax can only update the current page.. too much data here-->
+    <div class="order-shell receipt-shell shell-con">
+      <div class="flex flex-direction flex-wrap text-a-cent space-b">
+        <div class="flex-item b">user</div>
+        <div class="flex-item b">name</div>
+        <div class="flex-item b">count</div>
+        <div class="flex-item b">zone</div>
+        <div class="flex-item b">order</div>
+        <div class="flex-item b">time</div>
+      </div>
 
-  <div id="order">
-    <% if @lounge.orders.blank? %>
-    <% else %>
-      <% @lounge.orders.each do |order| %>
-        <div id="lounge-order-receipt">
-          <%= render 'orders/order_receipt', order: order %>
-          <!-- ^ data is rendered from the partial -->
-          <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
-      <% end %> <!--end of loop-->
-      </div> <!--end of flexbox div-->
-    <% end %><!--end of if statement-->
-    <!--there should be a javascript create page with this content-->
-    </div><!--end of id='order'-->
-</div><!--end of the receipt-shell-->
+      <div id="order">
+        <% if @lounge.orders.blank? %>
+        <% else %>
+          <% @lounge.orders.each do |order| %>
+            <div id="lounge-order-receipt">
+              <%= render 'orders/order_receipt', order: order %>
+              <!-- ^ data is rendered from the partial -->
+              <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
+          <% end %> <!--end of loop-->
+          </div> <!--end of flexbox div-->
+        <% end %><!--end of if statement-->
+        <!--there should be a javascript create page with this content-->
+        </div><!--end of id='order'-->
+    </div><!--end of the receipt-shell-->
+  </div><!--end of #bev-order-rec-div-->
 
-
-  </div><!-- end of the loung-con -->
+  </div><!-- end of the loung-container -->
 </div><!--container-->
 
 

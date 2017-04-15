@@ -16,6 +16,7 @@ class LoungesController < ApplicationController
   def show
     @order = Order.new
     @bev = Bev.new
+    @zone = Zone.new
     authorize @bev
   end
 
