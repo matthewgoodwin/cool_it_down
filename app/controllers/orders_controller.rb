@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :find_order, only: [:show, :edit, :update, :destroy]
   before_action :find_bev, only: [:create]
-
+  before_action :find_lounge, only: [:destroy]
   before_action :order_params, only:[:create]
 
 
@@ -41,6 +41,9 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+    @order.destroy
+    redirect_to lounge_path(@lounge)
+    # ^ coming from the find_lounge before action
   end
 
   private
@@ -58,5 +61,8 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:duration, :quantity, :zone)
   end
 
+  def find_lounge
+    @lounge = @order.lounge_id
+  end
 
 end

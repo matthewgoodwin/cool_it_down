@@ -9,4 +9,7 @@
     <div class="flex-item"><%= order.zone %></div>
     <div class="flex-item"><%= order.bev.name %></div>
     <div class="flex-item"><%= @time.strftime("%H:%M")%></div>
+    <div class="flex-item"><%= link_to order_path(order), method: :delete do %>
+    <i class="fa fa-trash" aria-hidden="true"></i><% end %>
+    </div>
 </div>
