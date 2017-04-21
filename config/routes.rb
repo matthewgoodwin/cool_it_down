@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'shell', to: 'pages#shell'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
-  get 'dashboard', to: 'pages#'
+  get 'dashboard', to: 'pages#dashboard'
   resources :lounges, shallow: true do
     member do
     get "receipts", to: "lounges#receipts"

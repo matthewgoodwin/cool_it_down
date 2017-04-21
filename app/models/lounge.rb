@@ -1,6 +1,6 @@
 class Lounge < ApplicationRecord
   include PgSearch
-  pg_search_scope :search_by_name_or_city, against: [[:name, 'A' ], [ :city, 'B']]
+  pg_search_scope :search_by_name_or_city, against: [[:name, 'A' ], [:city, 'B']]
 
   belongs_to :user
   has_many :orders, dependent: :destroy

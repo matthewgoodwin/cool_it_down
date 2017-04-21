@@ -1,8 +1,30 @@
 # README
 
+april 21, 2017
+
+search forms that dont work.. WHY???
+
+      <div>
+        <%= simple_form_for lounges_path, :method => 'get' do |f| %>
+        <%= f.input :search, label: false, placeholder: "lounge or city" %>
+        <%= f.submit %>
+        <% end  %>
+      </div>
+AND...
+
+      <div>
+       <%= simple_form_for :pages, method: :get, url: search_path do |f| %>
+       <%= f.input :search, label: false, placeholder: "lounge or city" %>
+        <%= f.submit %>
+        <% end %>
+     </div>
+
+  New form works, but Im not certain why these do not...
+
+
 april 11,2017
 deleted from the home page
-  <p><%= link_to "sign out", destroy_user_session_path, class: "no-decor home-link", method: :delete %></p>
+      <p><%= link_to "sign out", destroy_user_session_path, class: "no-decor home-link", method: :delete %></p>
 
 Part 2:
 # I want to auto refresh the div without refreshing the entire page.. I can only use
@@ -26,7 +48,7 @@ March 18, 2017
 
  <div>
       <%= link_to "menu/order", "#", class: "toggle-menu-order" %>
-</div><!--end of link_to toggle button div -->
+  </div><!--end of link_to toggle button div -->
 
 
 Feb 24, 2017
@@ -36,53 +58,53 @@ dumb problem/bug with country.. so changed to 'nation'.. noby has time for this.
 
 feb 19, 2017
 
-<div class="container">
+    <div class="container">
 
-  <div class="lounge-container">
+      <div class="lounge-container">
 
-    <h1><%= @lounge.name %></h1>
-    <h4>Lounge#show</h4>
+        <h1><%= @lounge.name %></h1>
+        <h4>Lounge#show</h4>
 
-    <% @lounge.bevs.each do |bev|%>
-
-
-      <div class="bev-div">
-        <%= link_to bev_path(bev), class: "bev-path-link" do %>
-          <div class="bev-head">
-            <h3><%= bev.name %></h3>
-          </div><!--end of bev head-->
-
-          <div class="bev-body">
-            <p>description: <%= bev.desc %></p>
-            <p>category: <%= bev.variety %></p>
-          </div><!--end of bev body-->
-
-          <div class="bev-cost">
-            <p><%= bev.cost %></p>
-          </div><!-- end of cost-->
-        <% end %><!-- end of path-->
-          <div class="bev-action">
-            <%= link_to "order", bev_path(bev), class: "btn btn-primary" %>
-          </div>
-
-      </div> <!-- end of bev-div -->
+        <% @lounge.bevs.each do |bev|%>
 
 
-      <!-- The README FILE-->
+          <div class="bev-div">
+            <%= link_to bev_path(bev), class: "bev-path-link" do %>
+              <div class="bev-head">
+                <h3><%= bev.name %></h3>
+              </div><!--end of bev head-->
+
+              <div class="bev-body">
+                <p>description: <%= bev.desc %></p>
+                <p>category: <%= bev.variety %></p>
+              </div><!--end of bev body-->
+
+              <div class="bev-cost">
+                <p><%= bev.cost %></p>
+              </div><!-- end of cost-->
+            <% end %><!-- end of path-->
+              <div class="bev-action">
+                <%= link_to "order", bev_path(bev), class: "btn btn-primary" %>
+              </div>
+
+          </div> <!-- end of bev-div -->
 
 
-    <% end %><!-- end of loun bev loop -->
+          <!-- The README FILE-->
 
-  </div><!-- end of the loung-con -->
 
-</div><!--container-->
+        <% end %><!-- end of loun bev loop -->
+
+      </div><!-- end of the loung-con -->
+
+    </div><!--container-->
 
 
 feb 18, 2017
 below goes in the `lounges#show` page
-<div>
-    <%= render "orders/order_form", bev: bev, order: @order %>
-</div>
+    <div>
+        <%= render "orders/order_form", bev: bev, order: @order %>
+    </div>
 
 
 Feb, 14, 2017

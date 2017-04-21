@@ -2,6 +2,7 @@ class LoungesController < ApplicationController
   before_action :find_lounge, only: [:show, :receipts ,:edit, :update, :destroy]
   before_action :lounge_params, only: [:create]
   # before_action :lname_lcity, only: [:index]
+
   def index
     @lounges = policy_scope(Lounge)
     # authorize @lounges
@@ -10,7 +11,13 @@ class LoungesController < ApplicationController
     # If there is no `show` in the `LoungePolicy`, it will revert to parent `ApplicationPolicy` which returns false, by default
     # so override of the default policy is required
 
-    # @lounges = Lounge.search_by_name_or_city(lname_lcity)
+    if params[:search]
+      @lounges = policy_scope(Lounge.search_by_name_or_city(params[:search]))
+      # @lounges = Lounge.search_by_name_or_city(lname_lcity)
+    else
+      @lounges = policy_scope(Lounge)
+    end
+    # raise
   end
 
   def receipts
@@ -58,7 +65,7 @@ class LoungesController < ApplicationController
   end
 
   # def lname_lcity
-  #     params.require(:lounge).permit(:query)
+  #     params.require(:lounges).permit(:search)
   # end
 
 end

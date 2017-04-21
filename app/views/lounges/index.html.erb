@@ -1,6 +1,17 @@
 <div class="container">
   <div class="lounge-container shell-con">
     <h3>lounge#index</h3>
+
+      <div class="align-i-cent text-a-cent">
+        <%= form_tag(lounges_path, method: :get) do %>
+        <%= text_field_tag :search, params[:search], placeholder: "lounge or city" %>
+        <%= submit_tag "search", class: "btn-primary btn no-decor" %>
+        <div class="align-i-cent text-a-cent btn btn-primary"><!--all lounges btn-->
+          <%= link_to "view all", lounges_path %>
+        </div><!--end all lounges-btn-->
+       <% end %>
+      </div>
+
       <% @lounges.each do |l| %>
         <%= link_to lounge_path(l), class: "no-decor" do %>
           <div class="lounge-index-flex flex flex-direction flex-wrap align-i-cent text-a-cent space-b">
