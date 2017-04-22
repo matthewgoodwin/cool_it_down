@@ -17,21 +17,21 @@
   <div class="border dash-lounge-shell">
     <div class="flex flex-wrap flex-direction space-b">
       <div class="flex-item"><b>name</b></div>
-      <div class="flex-item"><b>category</b></div>
+      <div class="flex-item hidden-xs"><b>category</b></div>
       <div class="flex-item"><b>address</b></div>
       <div class="flex-item"><b>city</b></div>
-      <div class="flex-item"><b>branch</b></div>
+      <div class="flex-item hidden-xs"><b>branch</b></div>
       <div class="flex-item"><b>manager</b></div>
       <div class="flex-item"><b>phone</b></div>
-      <div class="flex-item"><b>action</b></div>
+      <div class="flex-item"><b>orders</b></div>
     </div>
    <% current_user.lounges.each do |l| %>
     <div class="flex flex-wrap flex-direction space-b dash-lounge-list align-i-cent">
       <div class="flex-item"><%= l.name %></div>
-      <div class="flex-item"><%= l.cat %></div>
+      <div class="flex-item hidden-xs"><%= l.cat %></div>
       <div class="flex-item"><%= l.address %></div>
       <div class="flex-item"><%= l.city %></div>
-      <div class="flex-item"><%= l.branch %></div>
+      <div class="flex-item hidden-xs"><%= l.branch %></div>
       <div class="flex-item"><%= l.manager %></div>
       <div class="flex-item"><%= l.phone %></div>
       <div class="flex-item"><%= link_to "view orders", receipts_lounge_path(l) %></div>
