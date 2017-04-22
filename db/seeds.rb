@@ -19,10 +19,10 @@ user4 = User.create(username:"tperk", fname: "travis", lname:"", email:"tperk@gm
 user5 = User.create(username:"mk", fname: "mathew", lname:"cline", email:"mk@gmail.com", password:"password")
 
 
-lounge1 = Lounge.create(name:"kitcat", cat:"bar", desc:"cat lounge and bar", city:"seoul", user: user1)
-lounge2 = Lounge.create(name:"cutter and buck", cat:"tavern", desc:"upscale bar with classic music and drinks", city:"san francisco", user: user4)
-lounge3 = Lounge.create(name:"petes", cat:"divebar", desc:"open at 6am til 6am", city:"denver", user: user5)
-lounge4 = Lounge.create(name:"sjbg", cat:"bar and grill", desc:"san joses premier sports bar and grill", city:"san jose", user: user2)
+lounge1 = Lounge.create(name:"kitcat", cat:"bar", desc:"cat lounge and bar", address: "123 hwashin-ro",city:"seoul", manager: "kim jeong", phone: "010-8234-5567", branch:"1", user: user1)
+lounge2 = Lounge.create(name:"cutter and buck", cat:"tavern", desc:"upscale bar with classic music and drinks", address: "456", city:"san francisco", manager:"eric", phone: "(415)555-3232", branch:"4", user: user4)
+lounge3 = Lounge.create(name:"petes", cat:"divebar", desc:"open at 6am til 6am", address: "789 twin peeks", city:"denver", manager:"steve", phone: "(555)555-6767", branch:"19", user: user5)
+lounge4 = Lounge.create(name:"sjbg", cat:"bar and grill", desc:"san joses premier sports bar and grill", address: "1011 2nd street", city:"san jose", manager:"patrick", phone: "(408)555-1234", branch:"3", user: user2)
 
 
 bev1 = Bev.create(name:"max", desc:"korean brew", cat:"beer", style:"malt", cost: 3.00, lounge: lounge3)

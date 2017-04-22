@@ -4,7 +4,7 @@
 
       <div class="align-i-cent text-a-cent">
         <%= form_tag(lounges_path, method: :get) do %>
-        <%= text_field_tag :search, params[:search], placeholder: "lounge or city" %>
+        <%= text_field_tag :search, params[:search], placeholder: "lounge or city", class: "l-index-search" %>
         <%= submit_tag "search", class: "btn-primary btn no-decor" %>
         <div class="align-i-cent text-a-cent btn btn-primary"><!--all lounges btn-->
           <%= link_to "view all", lounges_path %>
