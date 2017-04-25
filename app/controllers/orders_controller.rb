@@ -19,9 +19,11 @@ class OrdersController < ApplicationController
     @order.bev_id = @bev.id
     authorize @order
 
-    start_time = Time.now
-    duration = @order.duration * 60
-    end_time = start_time + duration
+    st = Time.now # current time stamp
+    int = @order.duration * 60 # intervals in minutes (x * 60secs)
+    et = st + int # end time: current time + inter
+
+    # I need to loop
 
     if @order.save
       respond_to do |format|

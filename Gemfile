@@ -10,6 +10,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'timers', '~> 4.1', '>= 4.1.2'
+
 gem 'pg_search'
 
 gem "pundit"
