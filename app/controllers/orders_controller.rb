@@ -18,6 +18,11 @@ class OrdersController < ApplicationController
     @order.lounge = @bev.lounge
     @order.bev_id = @bev.id
     authorize @order
+
+    start_time = Time.now
+    duration = @order.duration * 60
+    end_time = start_time + duration
+
     if @order.save
       respond_to do |format|
         format.html { redirect_to lounge_path(@bev.lounge) }
@@ -25,6 +30,10 @@ class OrdersController < ApplicationController
         format.js
         # ^ will render 'app/views/orders/create.js.erb' .. 'create' comes from this controller method name.
         # ^^ 'orders/create.js.erb' has access to the @order created/saved in this controller method.
+
+        # time and save order will be placed here!!!
+
+
     end
     else
       respond_to do |format|
