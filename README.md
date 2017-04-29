@@ -1,5 +1,12 @@
 # README
 
+April 30
+# original working form which was replaced by the new `:zone` form:
+<%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order" } %>
+# ^ the above is manual but works
+
+-----END
+
 April 29th
 
 # need to cycle through the lounge instance zones to isolate the stalls.
@@ -28,7 +35,7 @@ April 29th
 >>
 # ^ this works
 
-
+---------END
 
 april 27th
 

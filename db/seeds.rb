@@ -33,3 +33,18 @@ bev5 = Bev.create(name:"rum coke", desc:"spiced rum with american coke", cat:"co
 bev6 = Bev.create(name:"challis lane chardonnay", desc:"2015 VINTAGE ONLY; BRONZE MEDAL, SF CHRONICLE WINE COMP - Classically styled, this Chardonnay is bright with citrus, melon & toasty oak aromas. Medium body with flavors of apple & a hint of graham.", cat:"white wine", style:"other", cost: 22.55, lounge: lounge2)
 bev7 = Bev.create(name:"shock top", desc:"This light golden-colored, Belgian-style wheat beer is memorably aromatic and has a smooth, complex taste. Shock Top is unfiltered and naturally cloudy creating a traditional wheat beer with attitude.", cat:"french ale", style:"Witbier", cost: 10.00, lounge: lounge2)
 bev8 = Bev.create(name:"lagunitas ipa", desc:"#1 Selling IPA in CA. Has a huge hop character, but with enough malty richness to keep thinks insane, flavorous, and dangerously drinkable. ABV 6.2% 45 IBU", cat:"american ipa", style:"ipa",  cost: 16.99, lounge: lounge4)
+
+
+zone1 = Zone.create(stall:"20", seat:"4", lounge: lounge1)
+zone2 = Zone.create(stall:"40", seat:"5", lounge: lounge1)
+zone3 = Zone.create(stall:"30", seat:"3", lounge:lounge2)
+zone4 = Zone.create(stall:"40", seat:"4", lounge:lounge2)
+zone5 = Zone.create(stall:"50", seat:"6", lounge:lounge2)
+zone6 = Zone.create(stall:"25", seat:"3", lounge:lounge3)
+zone7 = Zone.create(stall:"35", seat:"5", lounge:lounge3)
+zone8 = Zone.create(stall:"85", seat:"6", lounge:lounge3)
+zone9 = Zone.create(stall:"1", seat:"2", lounge:lounge4)
+zone10 = Zone.create(stall:"2", seat:"4", lounge:lounge4)
+zone11 = Zone.create(stall:"3", seat:"5", lounge:lounge4)
+zone12 = Zone.create(stall:"4", seat:"8", lounge:lounge4)
+
