@@ -1,0 +1,5 @@
+<%= simple_form_for([lounge, zone]) do |f| %>
+  <%= f.input :stall, label: false, placeholder:"section/table" %>
+  <%= f.input :seat, label: false, placeholder:"number of seats" %>
+  <%= f.submit %>
+<% end %>

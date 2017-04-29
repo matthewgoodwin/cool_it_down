@@ -1,6 +1,7 @@
 class LoungesController < ApplicationController
   before_action :find_lounge, only: [:show, :receipts ,:edit, :update, :destroy]
   before_action :lounge_params, only: [:create]
+
   # before_action :lname_lcity, only: [:index]
 
   def index
@@ -28,6 +29,9 @@ class LoungesController < ApplicationController
     @bev = Bev.new
     @zone = Zone.new
     authorize @bev
+    @zone_op = @lounge.zones.all.map{|x| x.stall}
+    # ^ check the ReadMe file april 29th.. Should this be in a helper/module/model?
+
   end
 
   def new

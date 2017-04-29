@@ -33,6 +33,32 @@
       </div><!--end of modal-->
     </div><!--end of bev-action div-->
 
+
+  <div class="zone-action flex">
+      <div>
+        <% if policy(@lounge).destroy? %>
+          <a href="" data-toggle="modal" data-target="#create-zone">
+            <div class="btn round-div no-decor"><i class="fa fa-bullseye fa-lg" aria-hidden="true"></i></div>
+          </a>
+        <% end %>
+      </div>
+    <!--begin modal of zone create partial-->
+      <div class="modal fade zone-mod-style" id="create-zone">
+        <div class="modal-dialog" role="document"><!--aligns the modal document-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="create-zone-modal-header">create new zone</h3>
+              <p>zones#_zone_form.html</p>
+            </div><!--end of header-->
+            <div class="modal-body">
+              <%= render "zones/zone_form", lounge: @lounge, zone: @zone %>
+            </div><!--end of modal-body-->
+          </div><!--end of modal-content-->
+        </div><!--end of modal-dialog-->
+      </div><!--end of modal-->
+    </div><!--end of zone-action div-->
+
+
       <!-- ReadMe file for the the link_to version of the toggle button March 18-->
     <div class="flex"><!--bev/receipt toggle-->
       <a href="#bev-order-rec-div"><!--scrolls to bev/reciept shell-->

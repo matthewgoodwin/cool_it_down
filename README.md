@@ -1,5 +1,79 @@
 # README
 
+April 29th
+
+# need to cycle through the lounge instance zones to isolate the stalls.
+# this should be studied
+
+
+>> @lounge.zones
+=> #<ActiveRecord::Associations::CollectionProxy [#<Zone id: 1, stall: "40", seat: "3", lounge_id: 83, created_at: "2017-04-26 05:30:05", updated_at: "2017-04-26 05:30:05">, #<Zone id: 2, stall: "20", seat: "4", lounge_id: 83, created_at: "2017-04-26 06:06:15", updated_at: "2017-04-26 06:06:15">]>
+>>
+
+>> @lounge.zones.each{|x| x.stall}
+=> [#<Zone id: 1, stall: "40", seat: "3", lounge_id: 83, created_at: "2017-04-26 05:30:05", updated_at: "2017-04-26 05:30:05">, #<Zone id: 2, stall: "20", seat: "4", lounge_id: 83, created_at: "2017-04-26 06:06:15", updated_at: "2017-04-26 06:06:15">]
+>>
+
+>> @lounge.zones.all{|x| x.stall}
+=> #<ActiveRecord::AssociationRelation [#<Zone id: 1, stall: "40", seat: "3", lounge_id: 83, created_at: "2017-04-26 05:30:05", updated_at: "2017-04-26 05:30:05">, #<Zone id: 2, stall: "20", seat: "4", lounge_id: 83, created_at: "2017-04-26 06:06:15", updated_at: "2017-04-26 06:06:15">]>
+>>
+
+>> @lounge.zones.map{|x| x.stall}
+=> ["40", "20"]
+>>
+# ^ this works
+
+>> @lounge.zones.all.map{|x| x.stall}
+=> ["40", "20"]
+>>
+# ^ this works
+
+
+
+april 27th
+
+# trying to get the zones to display properly
+
+<%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order" } %>
+
+    <%= f.input :zone, collection: @lounge.zones.each {|z| [z] }, label: false, prompt: "zones", input_html: { class: "clear-order" } %>
+
+
+    <% f.simple_fields_for :zone, @lounge.zones.each do |z| %>
+      <%= z.input select: [z]%>
+    <% end %>
+
+
+<% @lounge.zones.sort{ |a, b| b.stall <=> a.stall }.each do |zone| %>
+    <%= f.simple_fields_for zone do |z| %>
+      <%= z.select(z.stall) %>
+    <% end %>
+    <% end %>
+
+
+
+
+
+MORE OF THE SAME
+
+
+<% @lounge.zones.each do |z| %>
+      <%= f.input :zone, label: false %>
+    <% end %>
+
+    <% f.simple_fields_for :zone, @lounge.zones.each do |z| %>
+      <%= z.input select_tag: [z]%>
+    <% end %>
+
+    <% @lounge.zones.sort{ |a, b| b.stall <=> a.stall }.each do |zone| %>
+    <%= f.simple_fields_for zone do |z| %>
+      <%= z.input label: [z] %>
+    <% end %>
+    <% end %>
+
+
+-----END-----
+
 april 21, 2017
 
 search forms that dont work.. WHY???

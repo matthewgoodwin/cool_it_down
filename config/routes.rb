@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # shollow nests for #index #new and #create
   # while avoiding unnecessary nesting for URLs that route to actions where the id is being passed
   # check rails routes
+    resources :zones
     resources :bevs do
       resources :orders
     end

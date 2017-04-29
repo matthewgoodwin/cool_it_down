@@ -4,7 +4,7 @@ class ZonesController < ApplicationController
   before_action :find_zone, only: [:destroy]
 
   def create
-    @zone = Zone.new(:zone_params)
+    @zone = Zone.new(zone_params)
     @zone.lounge = @lounge
     authorize @zone, :create?
     @zone.save
