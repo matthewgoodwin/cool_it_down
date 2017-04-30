@@ -22,6 +22,13 @@ class LoungesController < ApplicationController
   end
 
   def receipts
+    # @lounge_receipts = @lounge.orders.all.map.sort_by{|o| o.created_at}
+    # this works here, but not at the view level
+
+    @lounge_receipts = @lounge.orders.all.map.sort_by{|o| o.created_at}.reverse!
+
+    # a.sort_by { |h| h[:bar] }.reverse!
+    # a.sort{|a,b| b[:bar] <=> a[:bar]}
   end
 
   def show
@@ -31,6 +38,8 @@ class LoungesController < ApplicationController
     authorize @bev
     @zone_op = @lounge.zones.all.map{|x| x.stall}
     # ^ check the ReadMe file april 29th.. Should this be in a helper/module/model?
+    @lounge_receipts = @lounge.orders.all.map.sort_by{|o| o.created_at}.reverse!
+    # april 30th
 
   end
 

@@ -122,7 +122,7 @@
       <div id="order">
         <% if @lounge.orders.blank? %>
         <% else %>
-          <% @lounge.orders.each do |order| %>
+          <% @lounge_receipts.each do |order| %>
             <div id="lounge-order-receipt">
               <%= render 'orders/order_receipt', order: order %>
               <!-- ^ data is rendered from the partial -->
