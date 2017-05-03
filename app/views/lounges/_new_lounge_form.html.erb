@@ -7,7 +7,8 @@
   <%= f.input :phone, label: false, placeholder: "phone" %>
   <%= f.input :manager, label: false, placeholder: "manager" %>
   <%= f.input :branch, label: false, placeholder: "branch id" %>
-  <%= f.submit %>
+    <%= f.button :submit, "create lounge", class: "btn btn-primary no-decor" %>
+
 <% end %>
 <p><%= link_to "home", root_path %></p>
 <p><%= link_to "back", dashboard_path %></p>

@@ -1,5 +1,6 @@
 class BevsController < ApplicationController
   before_action :find_bev, only: [:show, :new, :edit, :update, :destroy]
+  before_action :find_bev_lounge, only: [:show]
   before_action :bev_params, only: [:create]
   before_action :find_lounge, only: [:create]
 
@@ -8,6 +9,8 @@ class BevsController < ApplicationController
 
   def show
     @order = Order.new
+    @zone = Zone.new
+    @zone_op = @lounge.zones.all.map{|x| x.stall}
   end
 
   def new
@@ -45,6 +48,10 @@ class BevsController < ApplicationController
     # ^ standard way above
     @lounge = current_user.lounges.find(params[:lounge_id])
     # ^ the above should add a layer of security. ensuring that only the current user creates the bev.
+  end
+
+  def find_bev_lounge
+    @lounge = Lounge.find(@bev.lounge_id)
   end
 
   def bev_params
