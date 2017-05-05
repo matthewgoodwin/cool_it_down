@@ -1,5 +1,21 @@
 # README
 
+#May 5,2017
+
+cloudinary and carrierwave form
+#With a regular rails form, use f.file_field :photo and f.hidden_field :photo_cache.
+
+
+ ApplicationController
+
+ # def configure_permitted_parameters
+  #   added_attrs = [:username, :email, :password, :password_confirmation, :remember_me]
+  #   devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+  #   devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  # end
+
+  -----------END
+
 April 30
 # original working form which was replaced by the new `:zone` form:
 <%= f.input :zone, label: false, placeholder: "select zone", input_html: { class: "clear-order" } %>

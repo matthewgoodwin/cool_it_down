@@ -6,11 +6,16 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :username, required: true, label: "username", placeholder: "username" %>
+        <%= f.input :fname, required: false, label:"first name", placeholder: "first name" %>
+        <%= f.input :lname, required: false, autofocus: true, label: "last name", placeholder: "last name" %>
+        <%= f.input :email, required: true, autofocus: true, label: "email", placeholder: "email@domain" %>
         <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
         <%= f.input :password_confirmation, required: true %>
+        <%= f.input :photo, label: "User Avatar" %>
+        <%= f.input :photo_cache, as: :hidden %>
       </div>
-
+        <!--check readme about photo upload form 5-5-2017-->
       <div class="form-actions">
         <%= f.button :submit, "Sign up" %>
       </div>
