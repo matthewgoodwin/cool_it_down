@@ -1,5 +1,15 @@
 # README
 
+
+May 7, 2017
+
+  <% avatar_url = current_user.photo || "http://placehold.it/50x50" %>
+  <div class="user-avatar dropdown-toggle", data-toggle= "dropdown" style="background-image: url('<%= image_path avatar_url , class: "avatar dropdown-toggle", id: "navbar-cool-menu" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
+
+  avatar for navbar.. not working
+-------END
+
+
 #May 5,2017
 
 cloudinary and carrierwave form
@@ -8,8 +18,8 @@ cloudinary and carrierwave form
 
  ApplicationController
 
- # def configure_permitted_parameters
-  #   added_attrs = [:username, :email, :password, :password_confirmation, :remember_me]
+ #  def configure_permitted_parameters
+  #   added_attrs = [:username, :fname, :lname, :photo, :photo_cache, :email, :password, :password_confirmation, :remember_me]
   #   devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
   #   devise_parameter_sanitizer.permit :account_update, keys: added_attrs
   # end

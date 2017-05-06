@@ -13,7 +13,14 @@
     <!-- Profile picture and dropdown -->
     <div class="navbar-cool-item">
       <div class="dropdown">
-        <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-cool-menu" data-toggle="dropdown">
+
+
+        <!--avatar problems-->
+        <% user_signed_in? ? avatar_url = current_user.photo : avatar_url = "user-icon.png" %>
+        <div class="user-avatar dropdown-toggle", data-toggle= "dropdown" style="background-image: url('<%= image_path avatar_url , class: "avatar dropdown-toggle", id: "navbar-wagon-menu" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
+        <!-- <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-cool-menu" data-toggle="dropdown"> -->
+        <!-- ^ working-->
+
         <ul class="dropdown-menu dropdown-menu-right navbar-cool-dropdown-menu">
           <li><%= link_to "sign in", new_user_session_path, class: "no-decor" %></li>
           <li><%= link_to "dashboard", dashboard_path, class: "no-decor" %></li>
