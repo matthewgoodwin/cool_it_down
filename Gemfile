@@ -22,9 +22,9 @@ gem 'devise'
 
 gem 'figaro'
 
-gem 'cloudinary'
-
 gem 'carrierwave', '~> 0.11.2'
+
+gem 'cloudinary'
 
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
