@@ -1,5 +1,15 @@
 # README
 
+may7,2017
+
+Cloudinary/carriewave was not working on heroku bc I didnt push the couldinary_url cred to heroku
+
+figaro heroku:set -e production
+
+heroku config
+
+-------END
+
 
 May 7, 2017
 
