@@ -26,6 +26,8 @@ gem 'carrierwave', '~> 0.11.2'
 
 gem 'cloudinary'
 
+gem 'omniauth-facebook'
+
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'

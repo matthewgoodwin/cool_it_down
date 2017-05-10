@@ -7,9 +7,10 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable, omniauth_providers: [:facebook]
   has_many :lounges, dependent: :destroy
   has_many :orders, dependent: :destroy
 
-  validates :username, :email, presence: true
-  validates :username, uniqueness: {scope: :email}
+  # validates :username, :email, presence: true
+  # validates :username, uniqueness: {scope: :email}
 end
