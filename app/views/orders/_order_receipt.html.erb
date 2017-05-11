@@ -2,7 +2,7 @@
 <div class="flex flex-direction flex-wrap receipt-div align-i-cent text-a-cent space-b ajax-order" id="rec-dv">
   <% @time = order.created_at %>
   <div class="flex-item hidden-xs">
-    <% order.user.photo.present? ? avatar_url = order.user.photo.url(:bright_face) : avatar_url = "user-icon.png" %>
+    <% order.user.photo.present? ? avatar_url = current_user.facebook_picture_url || order.user.photo.url(:bright_face) : avatar_url = "https://res.cloudinary.com/mattg/image/upload/v1494130069/user-icon_arl6kj.png" %>
     <!-- ^ added `.url(:brightface)` from the `photo_uploader` class-->
     <div class="user-avatar logo-img light-shadow" style="background-image: url('<%= image_path avatar_url %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
   </div>
