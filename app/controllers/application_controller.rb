@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
   include Pundit
 
   # Pundit: white-list approach.
@@ -30,8 +30,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :fname, :lname, :email, :password, :photo, :photo_cache) }
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :fname, :lname, :email, :password, :current_password, :photo, :photo_cache) }
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :photo, :photo_cache) }
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :current_password, :photo, :photo_cache) }
   end
   # ^ ReadME file May 5th, 2017 better version of this(needs to investigate)
 

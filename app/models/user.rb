@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :lounges, dependent: :destroy
   has_many :orders, dependent: :destroy
 
+  validates :first_name, :last_name, :email, presence: true
+  validates :first_name, uniqueness: {scope: :email}
+
   # validates :username, :email, presence: true
   # validates :username, uniqueness: {scope: :email}
 end

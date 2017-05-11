@@ -6,9 +6,9 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :username, required: true, label: "username", placeholder: "username" %>
-        <%= f.input :fname, required: false, label:"first name", placeholder: "first name" %>
-        <%= f.input :lname, required: false, autofocus: true, label: "last name", placeholder: "last name" %>
+        <%= f.input :username, required: false, label: "username", placeholder: "username" %>
+        <%= f.input :first_name, required: true, label:"first name", placeholder: "first name" %>
+        <%= f.input :last_name, required: true, autofocus: true, label: "last name", placeholder: "last name" %>
         <%= f.input :email, required: true, autofocus: true, label: "email", placeholder: "email@domain" %>
         <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
         <%= f.input :password_confirmation, required: true %>
