@@ -4,7 +4,7 @@
 <div class="navbar-cool navbar-cool-fixed">
   <!-- Logo -->
   <a href="/" class="navbar-cool-brand">
-    <%= image_tag "cid_logo_x_grid200.jpg" %>
+    <%= cl_image_tag ("cid_logo_x_grid200_kbyjzb.jpg") %>
   </a>
 
   <!-- Right Navigation -->
@@ -13,8 +13,6 @@
     <!-- Profile picture and dropdown -->
     <div class="navbar-cool-item">
       <div class="dropdown">
-
-
         <!--avatar problems-->
         <% user_signed_in? ? avatar_url = current_user.facebook_picture_url || current_user.photo.url(:bright_face) || avatar_url = "https://res.cloudinary.com/mattg/image/upload/v1494130069/user-icon_arl6kj.png" : avatar_url = "https://res.cloudinary.com/mattg/image/upload/v1494130069/user-icon_arl6kj.png" %>
         <!-- ^ added `.url(:brightface)` from the `photo_uploader` class-->
