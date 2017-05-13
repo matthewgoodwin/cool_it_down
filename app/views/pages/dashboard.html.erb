@@ -1,4 +1,4 @@
-<h1>dashboard#pages</h1>
+<!-- <h1>dashboard#pages</h1> -->
 <div class="container">
 <h3>welcome, <%= current_user.first_name %>&nbsp<%= current_user.last_name %></h3>
   <div class="flex user-card-shell">
@@ -15,8 +15,12 @@
     </div><!--end of user card-->
   </div><!--end of user-card-shell-->
 
- <p><%= link_to 'home', root_path %></p>
- <p><%= link_to 'create lounge', new_lounge_path %></p>
+ <h4>
+  <%= link_to new_lounge_path do %>
+    <i class="fa fa-building-o fa-2x" aria-hidden="true"></i>
+  <% end %>
+  create a lounge
+ </h4>
 
   <div class="border dash-lounge-shell">
     <div class="flex flex-wrap flex-direction space-b">
@@ -38,7 +42,10 @@
       <div class="flex-item hidden-xs"><%= l.branch %></div>
       <div class="flex-item"><%= l.manager %></div>
       <div class="flex-item"><%= l.phone %></div>
-      <div class="flex-item"><%= link_to "view orders", receipts_lounge_path(l) %></div>
+      <div class="flex-item"><%= link_to receipts_lounge_path(l) do %>
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+      <% end %></div>
+
     </div>
    <% end %>
   </div><!--end of border shell-->
