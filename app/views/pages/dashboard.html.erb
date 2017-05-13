@@ -1,15 +1,19 @@
 <h1>dashboard#pages</h1>
 <div class="container">
 <h3>welcome, <%= current_user.first_name %>&nbsp<%= current_user.last_name %></h3>
-<div class="flex user-card-shell">
-  <div class="user-card space-b align-i-cent text-a-cent">
-    <div class="flex-item">
-      <div class="user-avatar logo-img" style="background-image: url('<%= image_path "user-icon.png" %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
-    </div><!--end of user-icon-->
-    <div class="flex-item"><%= current_user.username %></div>
-    <div class="flex-item"><%= current_user.email %></div>
-  </div><!--end of user card-->
-</div><!--end of user-card-shell-->
+  <div class="flex user-card-shell">
+    <div class="user-card space-b align-i-cent text-a-cent">
+
+      <div class="flex-item">
+      <% avatar_url = current_user.facebook_picture_url || current_user.photo.url(:bright_face) || avatar_url = "https://res.cloudinary.com/mattg/image/upload/v1494130069/user-icon_arl6kj.png" %>
+      <!-- ^ added `.url(:brightface)` from the `photo_uploader` class-->
+        <div class="user-avatar logo-img" style="background-image: url('<%= image_path avatar_url %>'); background-size: cover; width: 50px; height: 50px; border-radius: 50%; background-position: center;"></div>
+
+      </div><!--end of user-icon-->
+      <div class="flex-item"><%= current_user.username %></div>
+      <div class="flex-item"><%= current_user.email %></div>
+    </div><!--end of user card-->
+  </div><!--end of user-card-shell-->
 
  <p><%= link_to 'home', root_path %></p>
  <p><%= link_to 'create lounge', new_lounge_path %></p>
