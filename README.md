@@ -1,7 +1,14 @@
 # README
 
+may 13, 2017
 
-may7,2017
+delete search button on `lounge search` page
+
+<%= submit_tag "search", class: "btn-primary btn no-decor" %>
+# ^switchted to `button_type`
+
+
+may 7, 2017
 
 Cloudinary/carriewave was not working on heroku bc I didnt push the couldinary_url cred to heroku
 

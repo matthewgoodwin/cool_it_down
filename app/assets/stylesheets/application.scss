@@ -32,11 +32,17 @@ li{
 .margin{
   margin-top: 60px;
 }
+
+.top-bottom-buffer{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 a{
   text-decoration: none;
   color: #1C1C1C;
-
 }
+
 a:hover{
   text-decoration: none;
   color: #1C1C1C;
@@ -106,6 +112,7 @@ a:hover{
 .light-shadow{
 box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
 }
+
 .no-decor{
   text-decoration: none;
 }
