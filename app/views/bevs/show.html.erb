@@ -1,28 +1,29 @@
-
-<h1>bevs#show.html.erb</h1>
-
-<!--back to lounge-->
-<div class="back-btn flex">
-  <%= link_to lounge_path(@bev.lounge.id) do %>
-    <i class="fa fa-chevron-circle-left fa-lg" aria-hidden="true"></i>
-  <% end %>
-</div><!--end back-btn-->
-
 <div class="container">
-  <h1><%= @bev.lounge.name %></h1>
-  <h3><%= @bev.name %></h3>
-  <p><%= @bev.style %></p>
-  <p><%= @bev.desc %></p>
-  <p><%= @bev.region %></p>
-  <p><%= @bev.cat %></p>
-  <div class="bev-action">
-  <div>
-    <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
-      <div class="btn btn-primary no-decor">$<%= @bev.cost %></div>
-    </a>
-  </div>
-</div>
-</div><!--end of container-->
+<!--   <h1>bevs#show.html.erb</h1> -->
+  <div class="shell-design shell-con-sm">
+    <h1><%= @bev.lounge.name %></h1>
+    <hr>
+    <!--back to lounge-->
+    <div class="back-btn flex">
+      <%= link_to lounge_path(@bev.lounge.id) do %>
+        <i class="fa fa-chevron-circle-left fa-lg" aria-hidden="true"></i>
+      <% end %>
+    </div><!--end back-btn-->
+    <h3><%= @bev.name %></h3>
+    <p><%= @bev.style %></p>
+    <p><%= @bev.desc %></p>
+    <p><%= @bev.region %></p>
+    <p><%= @bev.cat %></p>
+    <div class="bev-action">
+      <div>
+        <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
+          <div class="btn btn-primary no-decor">$<%= @bev.cost %></div>
+        </a>
+      </div>
+    </div>
+  </div><!--end of container-->
+</div><!--end of shell-con-->
+
 <!--begin modal of review partial-->
   <div class="modal fade bev-mod-style" id="bev-form-showpage-<%= @bev.id %>">
     <div class="modal-dialog" role="document"><!--aligns the modal document-->
@@ -36,3 +37,4 @@
       </div><!--end of modal-content-->
     </div><!--end of modal-dialog-->
   </div><!--end of modal-->
+
