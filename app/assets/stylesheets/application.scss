@@ -88,6 +88,14 @@ a:hover{
   color: rgb(15,15,15);
 }
 
+.btn-grad{
+background-image: linear-gradient(290deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 30%);
+}
+
+.btn-grad-light{
+background-image: linear-gradient(290deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 30%);
+}
+
 .btn-primary:hover{
   // background: #682626;
   // border-color: #682626;

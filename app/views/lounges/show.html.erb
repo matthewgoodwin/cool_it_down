@@ -84,7 +84,7 @@
               <div class="bev-action">
                 <div>
                   <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
-                    <div class="btn btn-primary no-decor">$<%= bev.cost %></div>
+                    <div class="btn btn-primary light-shadow no-decor">$<%= bev.cost %></div>
                   </a>
                 </div>
               </div>
@@ -94,7 +94,6 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
-                        <p>orders#_order_form.html</p>
                       </div><!--end of header-->
                       <div class="modal-body flex flex-center">
                         <%= render "orders/order_form", bev: bev, order: @order %>
