@@ -30,7 +30,7 @@ li{
 }
 
 .shell-con-sm{
-  max-width: 600px;
+  max-width: 400px;
 }
 
 .shell-design{
@@ -72,6 +72,14 @@ a:hover{
 }
 .space-a{
   justify-content: space-around;
+}
+
+.flex-center{
+  justify-content: center;
+}
+
+.w-auto-100{
+  width: 100%;
 }
 
 .btn-primary{

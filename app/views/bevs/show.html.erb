@@ -4,25 +4,25 @@
     <h1><%= @bev.lounge.name %></h1>
     <hr>
     <!--back to lounge-->
-    <div class="back-btn flex">
+    <div class="back-btn">
       <%= link_to lounge_path(@bev.lounge.id) do %>
         <i class="fa fa-chevron-circle-left fa-lg" aria-hidden="true"></i>
       <% end %>
     </div><!--end back-btn-->
     <h3><%= @bev.name %></h3>
-    <p><%= @bev.style %></p>
+    <p class="b"><%= @bev.style %></p>
     <p><%= @bev.desc %></p>
     <p><%= @bev.region %></p>
-    <p><%= @bev.cat %></p>
-    <div class="bev-action">
-      <div>
-        <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
-          <div class="btn btn-primary no-decor">$<%= @bev.cost %></div>
-        </a>
-      </div>
-    </div>
-  </div><!--end of container-->
-</div><!--end of shell-con-->
+    <p class="b"><%= @bev.cat %></p>
+    <div><!--order button div-->
+      <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
+        <div class="bev-action flex flex-center">
+          <div class="btn btn-primary no-decor w-auto-100">$<%= @bev.cost %></div>
+        </div><!--end of bev-action-->
+      </a>
+    </div><!--end of order button div-->
+  </div><!--end of shell-con-->
+</div><!--end of container-->
 
 <!--begin modal of review partial-->
   <div class="modal fade bev-mod-style" id="bev-form-showpage-<%= @bev.id %>">
@@ -31,7 +31,7 @@
         <div class="modal-header">
           <h3 class="bev-modal-header">Order for '<%= @bev.name %>'</h3>
         </div><!--end of header-->
-        <div class="modal-body">
+        <div class="modal-body flex flex-center"><!--flex makes the data in the modal center-->
           <%= render "orders/order_form", bev: @bev, order: @order %>
         </div><!--end of modal-body-->
       </div><!--end of modal-content-->
