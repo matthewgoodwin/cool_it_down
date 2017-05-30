@@ -4,7 +4,7 @@
     <%= f.input :zone, collection: @zone_op.sort_by.each { |z| [z] }, label: false, prompt: "tables", input_html: { class: "clear-order" } %>
     <!--sort_by can replace the each iterator-->
     <%= f.input :duration, collection:[10,13,15,18,20,23,25,30], prompt: "intervals in minutes", label: false, input_html: { class: "clear-order" } %>
-      <%= f.button :submit, "create order", class: "btn btn-primary no-decor btn-grad light-shadow w-auto-100" %>
+      <%= f.button :submit, "create order", class: "btn btn-primary no-decor btn-grad-light light-shadow w-auto-100" %>
   <% end %>
 </div>
 
