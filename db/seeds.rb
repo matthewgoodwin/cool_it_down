@@ -19,9 +19,9 @@ user4 = User.create(username:"tperk", first_name: "travis", last_name:"", email:
 user5 = User.create(username:"mk", first_name: "mathew", last_name:"cline", email:"mk@gmail.com", password:"password")
 
 
-lounge1 = Lounge.create(name:"kitcat", cat:"bar", desc:"cat lounge and bar", address: "123 hwashin-ro",city:"seoul", manager: "kim jeong", phone: "010-8234-5567", branch:"1", user: user1)
-lounge2 = Lounge.create(name:"cutter and buck", cat:"tavern", desc:"upscale bar with classic music and drinks", address: "456", city:"san francisco", manager:"eric", phone: "(415)555-3232", branch:"4", user: user4)
-lounge3 = Lounge.create(name:"petes", cat:"divebar", desc:"open at 6am til 6am", address: "789 twin peeks", city:"denver", manager:"steve", phone: "(555)555-6767", branch:"19", user: user5)
+lounge1 = Lounge.create(name:"magpie brewing co.", cat:"bar", desc:"cat lounge and bar", address: "123 hwashin-ro",city:"seoul", manager: "kim jeong", phone: "010-8234-5567", branch:"1", user: user1)
+lounge2 = Lounge.create(name:"smuggler's cove", cat:"tavern", desc:"upscale bar with classic music and drinks", address: "456 Gough St", city:"san francisco", manager:"eric", phone: "(415)555-3232", branch:"4", user: user4)
+lounge3 = Lounge.create(name:"lookin good r&l", cat:"divebar", desc:"open at 6am til 6am", address: "789 66 Sheridan Blvd", city:"denver", manager:"steve", phone: "(555)555-6767", branch:"19", user: user5)
 lounge4 = Lounge.create(name:"sjbg", cat:"bar and grill", desc:"san joses premier sports bar and grill", address: "1011 2nd street", city:"san jose", manager:"patrick", phone: "(408)555-1234", branch:"3", user: user2)
 
 

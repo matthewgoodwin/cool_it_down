@@ -8,7 +8,7 @@ class Lounge < ApplicationRecord
   has_many :zones, dependent: :destroy
   validates :name, :cat, :desc, :address, :city, :manager, :phone, :branch, presence: true
   validates :name, uniqueness: {scope: :branch, message: "this lounge and branch already exists!"}
-  validates :name, length: {maximum: 25, too_long: "%{count} characters is the max"}
+  validates :name, length: {maximum: 30, too_long: "%{count} characters is the max"}
   # ^ should change this to address, not city
   accepts_nested_attributes_for :zones
   # LOUNGE_ZONE = @lounge.zones.stall

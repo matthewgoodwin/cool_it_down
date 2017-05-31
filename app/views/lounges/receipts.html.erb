@@ -1,28 +1,30 @@
-<h1>receipts</h1>
+<div class="container">
+  <div class="receipt-shell shell-con shell-design">
+  <div class="flex flex-center">
+    <h1>receipts</h1>
+  </div>
+  <div class="flex flex-direction flex-wrap text-a-cent space-b">
+    <div class="flex-item b hidden-xs">user</div>
+    <div class="flex-item b">name</div>
+    <div class="flex-item b">count</div>
+    <div class="flex-item b">zone</div>
+    <div class="flex-item b">order</div>
+    <div class="flex-item b">time</div>
+    <div class="flex-item b"><i class="fa fa-trash" aria-hidden="true"></i></div>
+  </div>
 
-<div class="receipt-shell shell-con">
-
-<div class="flex flex-direction flex-wrap text-a-cent space-b">
-  <div class="flex-item b hidden-xs">user</div>
-  <div class="flex-item b">name</div>
-  <div class="flex-item b">count</div>
-  <div class="flex-item b">zone</div>
-  <div class="flex-item b">order</div>
-  <div class="flex-item b">time</div>
-  <div class="flex-item b"><i class="fa fa-trash" aria-hidden="true"></i></div>
-</div>
-
-<div id="orders">
-  <% if @lounge.orders.blank? %>
-  <% else %>
-    <% @lounge_receipts.each do |order| %>
-      <div id="lounge-order-receipts">
-        <%= render 'orders/order_receipt', order: order %>
-        <!-- ^ data is rendered from the partial -->
-        <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
-    <% end %> <!--end of loop-->
-    </div><!--end of id lounge receipts-->
-  <% end %><!--end of if statement-->
-  <!--there should be a javascript create page with this content-->
-  </div><!--end of id='order'-->
-</div><!--end of shell-->
+  <div id="orders">
+    <% if @lounge.orders.blank? %>
+    <% else %>
+      <% @lounge_receipts.each do |order| %>
+        <div id="lounge-order-receipts">
+          <%= render 'orders/order_receipt', order: order %>
+          <!-- ^ data is rendered from the partial -->
+          <!-- ^^ in addition; create.js.erb uses ajax to auto update the reciepts without refreshing the screen-->
+      <% end %> <!--end of loop-->
+      </div><!--end of id lounge receipts-->
+    <% end %><!--end of if statement-->
+    <!--there should be a javascript create page with this content-->
+    </div><!--end of id='order'-->
+  </div><!--end of shell-->
+</div><!--end of container-->
