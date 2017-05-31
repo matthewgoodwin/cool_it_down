@@ -1,7 +1,9 @@
 <div class="container">
 <!--   <h1>bevs#show.html.erb</h1> -->
   <div class="shell-design shell-con-sm">
-    <h1><%= @bev.lounge.name %></h1>
+    <div class="flex flex-center">
+      <h1><%= @bev.lounge.name %></h1>
+    </div>
     <hr>
     <!--back to lounge-->
     <div class="back-btn">
@@ -28,8 +30,8 @@
   <div class="modal fade bev-mod-style" id="bev-form-showpage-<%= @bev.id %>">
     <div class="modal-dialog" role="document"><!--aligns the modal document-->
       <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="bev-modal-header">Order for '<%= @bev.name %>'</h3>
+        <div class="modal-header flex flex-center">
+          <h3 class="bev-modal-header">Order for '<%= @bev.name %>':</h3>
         </div><!--end of header-->
         <div class="modal-body flex flex-center"><!--flex makes the data in the modal center-->
           <%= render "orders/order_form", bev: @bev, order: @order %>

@@ -1,13 +1,13 @@
 <div class="container">
   <div class="shell-con-sm shell-design">
-  <h3 class="create-lounge">Register a new lounge</h3>
-    <div class="flex space-a">
-      <div class="back-btn flex">
+    <div class="flex flex-center">
+      <h3 class="create-lounge">Register a new lounge</h3>
+    </div><!--end of flex-->
+      <div class="back-btn flex flex-center">
         <%= link_to dashboard_path do %>
           <i class="fa fa-chevron-circle-left fa-lg" aria-hidden="true"></i>
         <% end %>
       </div><!--end dashboard-btn-->
-    </div>
     <hr>
     <%= render 'lounges/new_lounge_form' %>
   </div>
