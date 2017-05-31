@@ -21,15 +21,15 @@ user5 = User.create(username:"mk", first_name: "mathew", last_name:"cline", emai
 
 lounge1 = Lounge.create(name:"magpie brewing co.", cat:"bar", desc:"cat lounge and bar", address: "123 hwashin-ro",city:"seoul", manager: "kim jeong", phone: "010-8234-5567", branch:"1", user: user1)
 lounge2 = Lounge.create(name:"smuggler's cove", cat:"tavern", desc:"upscale bar with classic music and drinks", address: "456 Gough St", city:"san francisco", manager:"eric", phone: "(415)555-3232", branch:"4", user: user4)
-lounge3 = Lounge.create(name:"lookin good r&l", cat:"divebar", desc:"open at 6am til 6am", address: "789 66 Sheridan Blvd", city:"denver", manager:"steve", phone: "(555)555-6767", branch:"19", user: user5)
+lounge3 = Lounge.create(name:"the tavern platt park", cat:"bar and grill", desc:"american traditional", address: "789 66 platt park", city:"denver", manager:"steve", phone: "(555)555-6767", branch:"19", user: user5)
 lounge4 = Lounge.create(name:"sjbg", cat:"bar and grill", desc:"san joses premier sports bar and grill", address: "1011 2nd street", city:"san jose", manager:"patrick", phone: "(408)555-1234", branch:"3", user: user2)
 
 
-bev1 = Bev.create(name:"max", desc:"korean brew", cat:"beer", style:"malt", cost: 3.00, lounge: lounge3)
+bev1 = Bev.create(name:"5 barrel pale ale", desc:"Odell ft collins. a little malt a little hop", cat:"draft beer", style:"malt hop", cost: 6.25, lounge: lounge3)
 bev2 = Bev.create(name:"bud light", desc:"Brewed with two-row & six-row barley malt, Bud Light has good balance hops & malt with a quick finish. Oh, and it has less calories to boot!", cat:"beer", style:"pilsner", cost: 5.55, lounge: lounge4)
 bev3 = Bev.create(name:"pabst blue ribbon", desc:"Pabst Blue Ribbon is a premium lager brew crafted with a hefty infusion of 6-row barley in its ingredient package, a carefully balanced carbohydrate profile from corn syrup, and Pacific domestic hops.", cat:"american pilsner", style:"pilsner", cost: 3.50, lounge: lounge3)
-bev4 = Bev.create(name:"whiskey rocks", desc:"12 year old whiskey. whiskey on rocks", cat:"spirit", style:"whiskey", cost: 7.00, lounge: lounge1)
-bev5 = Bev.create(name:"rum coke", desc:"spiced rum with american coke", cat:"cocktail", style:"rum", cost: 5.55, lounge: lounge1)
+bev4 = Bev.create(name:"the ghost", desc:"magpie american style sour 5.0 abv", cat:"craft beer", style:"american sour", cost: 6.00, lounge: lounge1)
+bev5 = Bev.create(name:"porter", desc:"magpie 5.5 abv robust porter", cat:"craft beer", style:"porter", cost: 6.00, lounge: lounge1)
 bev6 = Bev.create(name:"challis lane chardonnay", desc:"2015 VINTAGE ONLY; BRONZE MEDAL, SF CHRONICLE WINE COMP - Classically styled, this Chardonnay is bright with citrus, melon & toasty oak aromas. Medium body with flavors of apple & a hint of graham.", cat:"white wine", style:"other", cost: 22.55, lounge: lounge2)
 bev7 = Bev.create(name:"shock top", desc:"This light golden-colored, Belgian-style wheat beer is memorably aromatic and has a smooth, complex taste. Shock Top is unfiltered and naturally cloudy creating a traditional wheat beer with attitude.", cat:"french ale", style:"Witbier", cost: 10.00, lounge: lounge2)
 bev8 = Bev.create(name:"lagunitas ipa", desc:"#1 Selling IPA in CA. Has a huge hop character, but with enough malty richness to keep thinks insane, flavorous, and dangerously drinkable. ABV 6.2% 45 IBU", cat:"american ipa", style:"ipa",  cost: 16.99, lounge: lounge4)
