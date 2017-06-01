@@ -21,9 +21,8 @@
       <div class="modal fade bev-mod-style" id="create-bev">
         <div class="modal-dialog" role="document"><!--aligns the modal document-->
           <div class="modal-content">
-            <div class="modal-header flex flex-center">
+            <div class="modal-header modal-head-grad flex flex-center">
               <h3 class="create-bev-modal-header">create new beverage</h3>
-              <p>bevs#_bevs_form.html</p>
             </div><!--end of header-->
             <div class="modal-body flex flex-center">
               <%= render "bevs/bevs_form", lounge: @lounge, bev: @bev %>
@@ -46,9 +45,8 @@
       <div class="modal fade zone-mod-style" id="create-zone">
         <div class="modal-dialog" role="document"><!--aligns the modal document-->
           <div class="modal-content">
-            <div class="modal-header flex flex-center">
+            <div class="modal-header modal-head-grad flex flex-center">
               <h3 class="create-zone-modal-header">create new table</h3>
-              <p>zones#_zone_form.html</p>
             </div><!--end of header-->
             <div class="modal-body flex flex-center">
               <%= render "zones/zone_form", lounge: @lounge, zone: @zone %>
@@ -84,7 +82,7 @@
               <div class="bev-action">
                 <div>
                   <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
-                    <div class="btn btn-primary no-decor light-shadow btn-grad-light">$<%= bev.cost %></div>
+                    <div class="btn btn-primary no-decor light-shadow btn-grad-light-sm">$<%= bev.cost %></div>
                   </a>
                 </div>
               </div>
@@ -92,7 +90,7 @@
                 <div class="modal fade bev-mod-style" id="bev-form-<%= bev.id %>">
                   <div class="modal-dialog" role="document"><!--aligns the modal document-->
                     <div class="modal-content">
-                      <div class="modal-header bev-order-head flex flex-center">
+                      <div class="modal-header modal-head-grad flex flex-center">
                         <h3 class="bev-modal-header">Order for '<%= bev.name %>':</h3>
                       </div><!--end of header-->
                       <div class="modal-body flex flex-center">

@@ -5,10 +5,10 @@
       <div class="align-i-cent text-a-cent">
         <%= form_tag(lounges_path, method: :get) do %>
         <%= text_field_tag :search, params[:search], placeholder: "lounge or city", class: "l-index-search" %>
-        <%= button_tag(type: "submit", class: "btn-primary btn no-decor light-shadow btn-grad-light") do %>
+        <%= button_tag(type: "submit", class: "btn-primary btn no-decor light-shadow btn-grad-light-sm") do %>
           <i class="fa fa-search fa-lg" aria-hidden="true"></i>
         <% end %><!--end of submit/search button for lounge search-->
-        <div class="align-i-cent text-a-cent btn btn-primary light-shadow btn-grad-light"><!--all lounges btn-->
+        <div class="align-i-cent text-a-cent btn btn-primary light-shadow btn-grad-light-sm"><!--all lounges btn-->
           <%= link_to "see all", lounges_path %>
         </div><!--end all lounges-btn-->
        <% end %>

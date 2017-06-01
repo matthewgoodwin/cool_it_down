@@ -1,8 +1,8 @@
 <!-- <h1>dashboard#pages</h1> -->
 <div class="container">
 <h3>welcome, <%= current_user.first_name %>&nbsp<%= current_user.last_name %></h3>
-  <div class="user-card-shell">
-    <div class="flex user-card">
+  <div class="flex flex-center user-card-shell shell-design">
+    <div class="user-card">
       <div class="">
         <% avatar_url = current_user.facebook_picture_url || current_user.photo.url(:bright_face) || avatar_url = "https://res.cloudinary.com/mattg/image/upload/v1494130069/user-icon_arl6kj.png" %>
         <!-- ^ added `.url(:brightface)` from the `photo_uploader` class-->
@@ -12,17 +12,24 @@
         <h6 class=""><%= current_user.username %></h6>
         <h6 class=""><%= current_user.email %></h6>
       </div>
+      <div class="">
+     <h6>
+      <%= link_to new_lounge_path do %>
+        <i class="fa fa-building-o fa-2x" aria-hidden="true"></i>
+      <% end %>
+      create a lounge
+     </h6>
+    <h6>
+      <%= link_to lounges_path do %>
+        <i class="fa fa-th-list fa-2x" aria-hidden="true"></i>
+      <% end %>
+    lounges
+      </h6>
+    </div>
     </div><!--end of user card-->
   </div><!--end of user-card-shell-->
 
- <h4>
-  <%= link_to new_lounge_path do %>
-    <i class="fa fa-building-o fa-2x" aria-hidden="true"></i>
-  <% end %>
-  create a lounge
- </h4>
-
-  <div class="border dash-lounge-shell">
+  <div class="border dash-lounge-shell shell-design">
     <div class="flex flex-wrap flex-direction space-b">
       <div class="flex-item"><b>name</b></div>
       <div class="flex-item hidden-xs"><b>category</b></div>

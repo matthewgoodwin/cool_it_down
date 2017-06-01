@@ -89,11 +89,15 @@ a:hover{
 }
 
 .tab-grad-light{
-background-image: linear-gradient(280deg, rgba(184,184,184,0.2) 0%, rgba(255,255,255,0.1) 23%);
+background-image: linear-gradient(280deg, rgba(185,185,185,0.3) 0%, rgba(255,255,255,0.1) 23%);
 }
 // the first number is the endpoint, not the start
 .btn-grad-light{
 background-image: linear-gradient(290deg, rgba(0,0,0,0.15) 0%, rgba(0,203,255,0.1) 29%);
+}
+// the first number is the endpoint, not the start
+.btn-grad-light-sm{
+background-image: linear-gradient(290deg, rgba(80,80,80,0.2) 0%, rgba(0,203,255,0.1) 30%);
 }
 // the first number is the endpoint, not the start
 .btn-primary:hover{
