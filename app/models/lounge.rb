@@ -12,4 +12,5 @@ class Lounge < ApplicationRecord
   # ^ should change this to address, not city
   accepts_nested_attributes_for :zones
   # LOUNGE_ZONE = @lounge.zones.stall
+
 end
