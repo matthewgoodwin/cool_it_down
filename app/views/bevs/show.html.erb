@@ -16,13 +16,22 @@
     <p><%= @bev.desc %></p>
     <p><%= @bev.region %></p>
     <p class="b"><%= @bev.cat %></p>
-    <div><!--order button div-->
-      <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
-        <div class="bev-action flex flex-center">
-          <div class="btn btn-primary no-decor btn-grad-light light-shadow w-auto-100">$<%= @bev.cost %></div>
-        </div><!--end of bev-action-->
-      </a>
-    </div><!--end of order button div-->
+    <div class="">
+      <div class="top-bottom-buffer"><!--order button div-->
+        <a href="" data-toggle="modal" data-target="#bev-form-showpage-<%= @bev.id %>" >
+          <div class="bev-action flex flex-center">
+            <div class="btn btn-primary no-decor btn-grad-light light-shadow w-auto-100">$<%= @bev.cost %></div>
+          </div><!--end of bev-action-->
+        </a>
+      </div><!--end of order button div-->
+      <div class="top-bottom-buffer"><!--order button div-->
+        <a href="" data-toggle="modal" data-target="#bev-form-showpage2-<%= @bev.id %>" >
+          <div class="bev-action flex flex-center">
+            <div class="btn btn-primary no-decor btn-grad-light light-shadow w-auto-100">Instant Single Order</div>
+          </div><!--end of bev-action-->
+        </a>
+      </div><!--end of order button div-->
+    </div><!--buffer-->
   </div><!--end of shell-con-->
 </div><!--end of container-->
 

@@ -23,6 +23,8 @@ class OrdersController < ApplicationController
     int = @order.duration * 60 # intervals in minutes (x * 60secs)
     et = st + int # end time: current time + inter
 
+    # @order.basic_timer instance method created in the Class
+
     # I need to loop
 
     if @order.save

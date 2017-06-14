@@ -1,5 +1,13 @@
 # README
 
+June 11, 2017
+
+prepopulate form with default data:
+
+<%= f.input :user, :input_html => { :value => 'user@domain.com' } %>
+
+------END
+
 may 13, 2017
 
 delete search button on `lounge search` page
