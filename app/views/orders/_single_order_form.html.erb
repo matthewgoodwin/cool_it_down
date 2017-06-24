@@ -1,10 +1,10 @@
 <div class=""><!--could place  flex flex-center here -->
   <%= simple_form_for([bev, order], remote: true) do |f| %>
-    <%= f.input :quantity, collection:[1,2,3,4,5,6], label: false, prompt: "quantity", input_html: { class: "clear-order" } %>
+    <%= f.input :quantity, as: "hidden", label: false, prompt: "quantity", input_html: { value:"1", class: "clear-order" } %>
     <%= f.input :zone, collection: @zone_op.sort_by.each { |z| [z] }, label: false, prompt: "table", input_html: { class: "clear-order" } %>
     <!--sort_by can replace the each iterator-->
-    <%= f.input :duration, collection:[10,13,15,18,20,23,25,30], prompt: "intervals in minutes", label: false, input_html: { class: "clear-order" } %>
-      <%= f.button :submit, "create order", class: "btn btn-primary no-decor btn-grad-light light-shadow w-auto-100" %>
+    <%= f.input :duration, as:"hidden", label: false, input_html: { value:"0", class: "clear-order"} %>
+      <%= f.button :submit, "create one-time order", class: "btn btn-primary no-decor btn-grad-light light-shadow w-auto-100" %>
   <% end %>
 </div>
 
