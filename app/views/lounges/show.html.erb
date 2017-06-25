@@ -71,7 +71,7 @@
           <div class="bev-div">
             <%= link_to bev_path(bev), class: "bev-path-link no-decor" do %>
               <div class="bev-body">
-                <h4><%= bev.name %></h4>
+                <h5><%= bev.name %></h5>
                 <!--description here -->
                 <h6><%= bev.style %></h6>
               </div><!--end of bev body-->
@@ -79,11 +79,20 @@
              <!--  <div class="bev-cost">
                 <p>cost</p>
               </div> end of cost-->
-              <div class="bev-action">
-                <div>
-                  <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
-                    <div class="btn btn-primary no-decor light-shadow btn-grad-light-sm">$<%= bev.cost %></div>
-                  </a>
+              <div class="bev-price-order">
+                <div class="bev-action flex end">
+                  <div class="light-padding"><!--may need to change this to margin-->
+                    <a href="" data-toggle="modal" data-target="#bev-form-<%= bev.id %>" >
+                      <div class="btn btn-primary no-decor light-shadow btn-grad-light-sm">$<%= bev.cost %></div>
+                    </a>
+                  </div>
+                  <!--new button-->
+                  <div class="light-padding"><!--may need to change this to margin-->
+                    <a href="" data-toggle="modal" data-target="#bev-form2-<%= bev.id %>" >
+                      <div class="btn btn-primary no-decor light-shadow btn-grad-light-sm"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+                    </a>
+                  </div>
+                  <!--end of new button-->
                 </div>
               </div>
               <!--begin modal of order partial-->
@@ -99,6 +108,20 @@
                     </div><!--end of modal-content-->
                   </div><!--end of modal-dialog-->
                 </div><!--end of modal-->
+              <!--begin modal of single order partial-->
+                <div class="modal fade bev-mod-style" id="bev-form2-<%= bev.id %>">
+                  <div class="modal-dialog" role="document"><!--aligns the modal document-->
+                    <div class="modal-content">
+                      <div class="modal-header modal-head-grad flex flex-center">
+                        <h3 class="bev-modal-header">Order for '<%= bev.name %>'</h3>
+                      </div><!--end of header-->
+                      <div class="modal-body flex flex-center">
+                        <%= render "orders/single_order_form", bev: bev, order: @order %>
+                      </div><!--end of modal-body-->
+                    </div><!--end of modal-content-->
+                  </div><!--end of modal-dialog-->
+                </div><!--end of modal-->
+
           </div> <!-- end of bev-div -->
           <!-- The README FILE-->
         <% end %><!-- end of loun bev loop -->

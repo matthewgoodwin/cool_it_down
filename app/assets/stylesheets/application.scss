@@ -43,6 +43,9 @@ li{
   box-shadow: 0.5px 0.5px 4px #a8a8a8;
   font-family: 'Lato', sans-serif;
 }
+.light-padding{
+  padding: 4px;
+}
 
 .margin{
   margin-top: 60px;
@@ -76,6 +79,10 @@ a:hover{
 
 .flex-center{
   justify-content: center;
+}
+
+.end{
+  justify-content: flex-end;
 }
 
 .w-auto-100{
