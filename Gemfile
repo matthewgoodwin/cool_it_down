@@ -18,7 +18,7 @@ gem "pundit"
 
 gem 'hirb', '~> 0.7.3'
 
-gem 'devise', '~>4.4.0'
+gem 'devise', '~>4.7.1'
 
 gem 'figaro'
 
