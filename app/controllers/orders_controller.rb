@@ -37,8 +37,6 @@ class OrdersController < ApplicationController
         # ^^ 'orders/create.js.erb' has access to the @order created/saved in this controller method.
 
         # time and save order will be placed here!!!
-
-
     end
     else
       respond_to do |format|
@@ -46,7 +44,33 @@ class OrdersController < ApplicationController
         format.js #<-- idem
       end
     end
-  end
+
+
+    # if @order.duration != 0
+    #   while Time.now < et
+    #   end
+    #   if @order.save
+    #   respond_to do |format|
+    #     format.html { redirect_to lounge_path(@bev.lounge) }
+    #     # ^ will render regular html format and redirect
+    #     format.js
+    #     # ^ will render 'app/views/orders/create.js.erb' .. 'create' comes from this controller method name.
+    #     # ^^ 'orders/create.js.erb' has access to the @order created/saved in this controller method.
+
+    #     # time and save order will be placed here!!!
+    # end
+    # else
+    #   respond_to do |format|
+    #     format.html { render 'lounges/show'}
+    #     format.js #<-- idem
+    #   end
+    # end
+
+    # else
+    # end
+
+
+  end # end of create
 
   def edit
   end

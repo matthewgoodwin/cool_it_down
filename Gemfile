@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-
+source 'http://rubygems.org'
+# http://insecure.rails-assets.org
 source 'https://rails-assets.org' do
   gem 'rails-assets-plugin'
 end
@@ -18,7 +18,7 @@ gem "pundit"
 
 gem 'hirb', '~> 0.7.3'
 
-gem 'devise'
+gem 'devise', '~>4.4.0'
 
 gem 'figaro'
 
@@ -28,7 +28,7 @@ gem 'cloudinary'
 
 gem 'omniauth-facebook'
 
-ruby '2.3.1'
+ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record

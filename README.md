@@ -1,5 +1,15 @@
 # README
 
+Feb 2 2018---
+use in the gem file http://insecure.rails-assets.org
+to update the omniauth gem(security issues)..
+
+so it appears:
+source 'http://insecure.rails-assets.org' do
+  gem 'rails-assets-plugin'
+end
+---end
+
 June 11, 2017
 
 prepopulate form with default data:
